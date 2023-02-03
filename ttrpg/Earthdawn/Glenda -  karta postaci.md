@@ -7,7 +7,7 @@ ac:
 modifier: 
 ---
 
-# Glenda
+# Ogólne
 
 
 ||
@@ -28,7 +28,7 @@ punkty obrażeń | *0* |
 
 próg ran | próg przytomności | próg życia | testy zdrowienia | kostki akcji |
 :---:|:---:|:---:|:---:|:---:|
-9 | 30 | 39 | *2* | **1k10**|
+9 | 30 | 39 | *2* | **k10**|
 
 ### Obrona
 fizyczna | magiczna | społeczna |
@@ -58,7 +58,7 @@ stopień ZR | modyfikator ZB i T | stopień | kostka akcji |
 ### Karma
 aktualna | maksymalna | koszt | kostka akcji |
 :---:|:---:|:---:|:---:|
-*13* | 25 | 8 PL | **1k6** |
+*13* | 25 | 8 PL | **k6** |
 
 ### Punkty legend
 aktualne | wszystkie |
@@ -70,12 +70,12 @@ aktualne | wszystkie |
 
 cecha | wartość | modyfikator | suma | stopień | kostka akcji |
 :---:|:----:|:----:|:---:|:---:|:---:|
-zręczność | 13 | *+1* | 14 | **6 ** | **1k10** |
-siła fizyczna | 11 | *-1* | 10 | **5 ** | **1k8** |
-żywotność | 12 | *+1* | 13 | **6 ** | **1k10** |
-percepcja | 14 | *+1* | 15 | **6 ** | **1k10** |
-siła woli | 16 | *0* | 16 | **7 ** | **1k12** |
-charyzma | 13 | *+1* | 14 | **6 ** | **1k10** |
+zręczność | 13 | *+1* | 14 | **6 ** | **k10** |
+siła fizyczna | 11 | *-1* | 10 | **5 ** | **k8** |
+żywotność | 12 | *+1* | 13 | **6 ** | **k10** |
+percepcja | 14 | *+1* | 15 | **6 ** | **k10** |
+siła woli | 16 | *0* | 16 | **7 ** | **k12** |
+charyzma | 13 | *+1* | 14 | **6 ** | **k10** |
 
 
 # Czary
@@ -95,7 +95,7 @@ Ochronna mgła *(+)* | 1 | 6/13 | osobisty | 3 + poziom |
 talent | poziom | st. cechy | st. talentu | kostka | dysc. | akcja | karma | wycz. |
 :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 czytanie/pisanie | 1 + **PR** | 6 | = *7* | **k12** | - | + | - | - | 
-znaki magiczne | 2 + **PR** | 6 | = *7* | **2k6** | + | + | - | - |
+znaki magiczne | 2 + **PR** | 6 | = *7* | **k12** | + | + | - | - |
 matryca | 2 | - | = *2* | **k4-1** | - | nd | - | - |
 matryca | 2 | - | = *2* | **k4-1** | - | nd | - | - |
 rytuał karmiczny | 1 | - | = *1* | **k4-2** | - | nd | - | - |
@@ -106,7 +106,7 @@ wytrzymałość | 1  | - | = *1* | - | - | nd | - | - |
 # Zdolności
 zdolność | poziom | stopień zdolności | kostka |
 :---:|:---:|:---:|:---:|
-atak ogonem | 3 + **SF** | = *8* | ** nie pamiętam ** | 
+atak ogonem | 3 + **SF** | = *8* | **2k6** | 
 
 # Umiejętności
 umiejętność | poziom | stopień | kostka | 
