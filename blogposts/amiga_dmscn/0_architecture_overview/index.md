@@ -19,8 +19,8 @@ guess A500 is an OCS Amiga. But what does it exactly mean?
 It consists of a few important parts: **custom chips** and **fast/chip/"slow" RAM sections**. Diagram below represents the system architecture:
 
 
+![[diagram.png]]
 
-![Amiga system block diagram](diagram.gif)
 
 It's clearly divided into two main sections - the realm of the CPU and a custom chip section. Before we'll get to the chipset itself, it's important to explain how the RAM works. As you can see, there are three types of it, living in different parts of the system. What's the difference?
 - **Fast RAM** - this is the memory that the custom chips can't use. Because of that, the CPU is free to access it at full speed at any given time (hence the name). It's optional, requiring an additional expansion memory card.
