@@ -91,8 +91,15 @@ Ochronna mgła *(+)* | 1 | 6/13 | osobisty | 3 + poziom |
 
 # Talenty
 
-talent | poziom | st. cechy | stopień talentu | kostka | dysc. | akcja | karma | wycz. |
- :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+talent | poziom | st. cechy | st. talentu | kostka | dysc. | akcja | karma | wycz. |
+:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+czytanie/pisanie | 1 + **PR** | 6 | = *7* | **1k12** | - | + | - | - | 
+znaki magiczne | 2 + **PR** | 6 | = *7* | **2k6** | + | + | - | - |
+matryca | 2 | - | = *2* | **k4 - 1** | - | nd | - | - |
+matryca | 2 | - | = *2* | **k4 - 1** | - | nd | - | - |
+rytuał karmiczny | 1 | - | = *1* | **k4 - 2** | - | nd | - | - |
+rzucanie czarów | 6 + *PR* | 6 | = *12* | **2k10** | + | + | - | - |
+tkanie wątków | 6 + *PR* | 6 | = *12* | **2k10** | + | + | - | - |
  
 
 # Equipment
