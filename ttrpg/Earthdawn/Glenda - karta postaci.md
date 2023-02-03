@@ -1,6 +1,5 @@
 ---
-alias: Untitled
-tags: Entity/Player-Character, Multiverse/D&D
+tags: ttrpg
 cssclass: hcl, table, t-c, readable
 
 hp: 
@@ -9,9 +8,7 @@ modifier:
 ---
 
 # Glenda
-> (Description:: )
 
-![[|locl+hs-med]] <i>[]()</i>
 
 ||
 ----|:---:|
@@ -20,7 +17,6 @@ modifier:
 **Rasa** | T'skrang
 **Wzrost** | 177cm
 **Waga** | 98kg
-**Eee** | 
 
 ---
 # Współczynniki
@@ -122,15 +118,15 @@ wyszukiwanie informacji | 1 + **PR** | = *7* | **k12**
 # Ekwipunek
 nazwa | ilość | efekt | notatki |
 :---:|:---:|:---:|:---:|
-krwawe kamienie | x1 | 
+srebro | 38 | | |
+racje żywnościowe | x0 | | |
+krwawe kamienie | x1 | | |
+ubrania podróżne | x1 | | |
+kapelusz | x1 | | | 
+zestaw podróżny | x1 | | |
+narzędzia | x1 | | |
+zwykła latarnia | x1 | | |
+DIY kostur | x1 | **SF** += 1 | kiepski, ale własnej roboty!
+nawiedzony medalion | x1 | | tulpa inside |
+łuski czegośtam | x3 | ??? | ???
 
-- 
-
-# Personality
-###### Personality Traits
-
-###### Ideals
-
-###### Bonds
-
-###### Flaws
