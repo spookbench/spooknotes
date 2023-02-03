@@ -108,15 +108,21 @@ tkanie wątków | 4 + **PR** | 6 | = *10* | **k10+k6** | + | + | - | - |
 wytrzymałość | 1  | - | = *1* | - | - | nd | - | - |
 
 # Zdolności
-\# | poziom | stopień zdolności | kostka |
+zdolność | poziom | stopień zdolności | kostka |
 :---:|:---:|:---:|:---:|
-atak ogonem | 3 + **SF** | 
- 
+atak ogonem | 3 + **SF** | = *8* | ** nie pamiętam ** | 
 
-# Equipment
-CP | SP | EP | GP | PP |
-:---:|:---:|:---:|:---:|:---:|
-|||||
+# Umiejętności
+umiejętność | poziom | stopień | kostka | 
+:---:|:---:|:---:|:---:|
+język wspólny + t'skrang | - | - | - |
+rzemieślnictwo | 1 + **ZR** | = *7* | **k12** |
+wyszukiwanie informacji | 1 + **PR** | = *7* | **k12**
+
+# Ekwipunek
+nazwa | ilość | efekt | notatki |
+:---:|:---:|:---:|:---:|
+krwawe kamienie | x1 | 
 
 - 
 
