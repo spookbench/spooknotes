@@ -80,7 +80,8 @@ Its resolution is 320x256 and it uses 16 colors, so a standard lores PAL full sc
 ![[bitplanes.png]]
 
 To determine the color of each pixel, Amiga fetches the value of this pixel on every bitplane and puts them together, to find the index of the color register that it's supposed to use. 
-Example below shows the hypote
+Example below shows a hypothetical bitmap, with the value of the first pixel for each bitplane marked as either `1` (black square) or `0` (white square). After putting them together we get `11010` (`0x1A`) which is the index of the color register that holds the final color of this particular pixel. In our example, the pixel will be light blue.
+
 GIF below ilustrates how our picture will look if we reduce the number of displayed bitplanes:
 
 ![aaaa](bitplanes.gif)
