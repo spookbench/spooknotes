@@ -31,12 +31,12 @@ fizyczna | magiczna | społeczna |
 |8|8|8|
 
 ### Pancerz
-Fizyczny | Duchowy | 
+fizyczny | duchowy | 
 :---:|:---:|
 |5|3|
 
 ### Siła
-Udźwig | Max |
+udźwig | max |
 :---:|:---:|
 40 | 80 |
 
@@ -46,11 +46,22 @@ w walce | pełna |
 33 | 65 |
 
 ### Inicjatywa
-stopień ZR | modyfikator ZB i T | stopień | kostka akcji
-
+stopień ZR | modyfikator ZB i T | stopień | kostka akcji |
+:---:|:---:|:---:|:---:|
+6 | -1 | = 5 | **1k8** |
 
 ---
-## Abilities
+# Cechy
+
+cecha | wartość | modyfikator | suma | stopień | kostka akcji |
+:---:|:----:|:----:|:---:|:---:|:---:|
+zręczność | 13 | +1 | 14 | **6 ** | **1k10** |
+siła fizyczna | 11 | -1 | 10 | **5 ** | **1k8** |
+żywotność | 12 | +1 | 13 | **6 ** | **1k10** |
+percepcja | 14 | +1 | 15 | **6 ** | **1k10** |
+siła woli | 16 | 0 | 1 | **6 ** | **1k10** |
+zręczność | 13 | +1 | 14 | **6 ** | **1k10** |
+
 ### Abilities
 STR | DEX | CON | INT | WIS | CHA ||
 :---:|:----:|:----:|:---:|:---:|:---:|---|
