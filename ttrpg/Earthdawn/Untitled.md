@@ -25,18 +25,29 @@ modifier:
 ---
 # Współczynniki
 
-Obrona |
-HP | AC | Speed | Initiative |
-:---:|:---:|:---:|:---:|
-||||
-
-Hit Dice | Proficiency Bonus | Temp HP | 
+### Obrona:
+fizyczna | magiczna | społeczna |
 :---:|:---:|:---:|
-|||
+|8|8|8|
 
-Senses | \# |
----|---|
-**Passive Perception** ||
+### Pancerz
+Fizyczny | Duchowy | 
+:---:|:---:|
+|5|3|
+
+### Siła
+Udźwig | Max |
+:---:|:---:|
+40 | 80 |
+
+### Szybkość
+w walce | pełna |
+:---:|:---:|
+33 | 65 |
+
+### Inicjatywa
+stopień ZR | modyfikator ZB i T | stopień | kostka akcji
+
 
 ---
 ## Abilities
