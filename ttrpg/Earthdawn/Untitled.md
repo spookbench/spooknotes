@@ -7,31 +7,25 @@ hp:
 ac: 
 modifier: 
 ---
-%%
-Creator:: Spook
-Universe:: Earthdawn Yumi
-Campaign:: Yumi 
-Adventure_Diary:: 
-%%
-<i>**` dv= this.Creator`**
-` dv= this.Universe`
-` dv= this.Campaign`</i>
 
-# Untitled
+# Glenda
 > (Description:: )
 
 ![[|locl+hs-med]] <i>[]()</i>
 
 ||
 ----|:---:|
-**Class** | Xenomant
-**Level** | 
-**Race** | T'skrang
-**Alignment** | 
-**Background** | 
+**Dyscyplina** | Ksenomanta
+**Krąg** | 2
+**Rasa** | T'skrang
+**Wzrost** | 177cm
+**Waga** | 98kg
+**Eee** | 
 
 ---
-# Stats
+# Współczynniki
+
+Obrona |
 HP | AC | Speed | Initiative |
 :---:|:---:|:---:|:---:|
 ||||
