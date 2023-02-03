@@ -9,21 +9,10 @@ const endOfYear = {
     day: 31
 }
 
-const lifespan = { year: 80 } 
-const birthday = DateTime.fromObject({
-    year: 2022,
-    month: 1,
-    day: 30
-});
-const deathday = birthday.plus(lifespan)
-
 function progress(type) {
     let value;
     
     switch(type) {
-        case "lifespan": 
-            value = (today.year - birthday.year) / lifespan.year * 100;
-            break;
         case "year":
             value = today.month / 12 * 100
             break;
@@ -44,7 +33,6 @@ dv.span(`
 | **Year** | ${progress("year")}
 | **Month**| ${progress("month")}
 | **Day**| ${progress("day")}
-| **Life** | ${progress("lifespan")}
 `)
 
 

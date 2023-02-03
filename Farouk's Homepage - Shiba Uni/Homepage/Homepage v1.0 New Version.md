@@ -9,6 +9,20 @@ banner_icon:
 banner_lock: true
 ---
 
+```dataviewjs
+const currentHour = moment().format('HH');
+console.log(currentHour)
+let greeting;
+if (currentHour >= 18 || currentHour < 5) {
+greeting = '🌙 Good Evening, Spook'
+} else if (currentHour >= 5 && currentHour < 12) {
+greeting = '🌞 Good Morning, Spook'
+} else {
+greeting = '🌞 Good Afternoon, Spook'
+}
+dv.header(2, greeting)
+```
+
 # <center>Farouk</center> 
  
 
