@@ -34,7 +34,7 @@ próg ran | próg przytomności | próg życia | testy zdrowienia | kostki akcji
 :---:|:---:|:---:|:---:|:---:|
 9 | 30 | 39 | *2* | **1k10**|
 
-### Obrona:
+### Obrona
 fizyczna | magiczna | społeczna |
 :---:|:---:|:---:|
 |8|8|8|
@@ -78,35 +78,21 @@ charyzma | 13 | *+1* | 14 | **6 ** | **1k10** |
 
 
 # Czary
-Czar | Wątki | Trudność utkania | Zasięg | Czas trwania |
+*(+)* - aktualnie w matrycy
+
+czar | wątki | trudność utkania | zasięg | czas trwania |
 :--:|-----|:------:|:---:|:---:|
 Doświadczenie śmierci| 1 | 6/12 | 20m | 3 + poziom |
 Krąg zimna | 2 | 6/15 | dotyk | 6 + poziom |
 Pojedynek woli | 0 | 0/7  | 10m | 3 + poziom |
 Zwierzęta nocy | 1 | 5/13 | 120m | 3 + poziom |
+Upiorny dotyk | 0 | -/7 | dotyk | 6 + siła woli |
+Ochronna mgła *(+)* | 1 | 6/13 | osobisty | 3 + poziom |
 
+# Talenty
 
-
-# Traits
-
-`button-trait`
-
-
-## Proficiencies
-
-## Languages
-
-
-# Actions
-
-`button-action`
-
-## Spells
-Level |Spell Slots | Prepared Spells |
-:---:|:---:|:---:|
-\# |||
-\# |||
- 
+talent | poziom | st. cechy | stopień talentu | kostka | dysc. | akcja | karma | wycz. |
+ :---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
  
 
 # Equipment
