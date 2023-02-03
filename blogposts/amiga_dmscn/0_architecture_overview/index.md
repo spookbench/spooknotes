@@ -77,7 +77,7 @@ It will be easiest to explain on an example. Look:
 
 Its resolution is 320x256 and it uses 16 colors, so a standard lores PAL full screen image. We are also going to use all five bitplanes. What are bitplanes? It's closely related to depth of the image we want to display. Imagine five monochrome layers, placed on top of each other to form the full, colored picture. How?
 
-[bitplane image here]
+![[Pasted image 20230203173428.png]]
 
 To determine the color of each pixel, Amiga fetches the value of this pixel on every bitplane and puts them together, to find the index of the color register that it's supposed to use. GIF below ilustrates how our picture will look if we reduce the number of displayed bitplanes:
 
