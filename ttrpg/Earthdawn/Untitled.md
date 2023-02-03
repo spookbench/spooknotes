@@ -72,32 +72,20 @@ cecha | wartość | modyfikator | suma | stopień | kostka akcji |
 zręczność | 13 | *+1* | 14 | **6 ** | **1k10** |
 siła fizyczna | 11 | *-1* | 10 | **5 ** | **1k8** |
 żywotność | 12 | *+1* | 13 | **6 ** | **1k10** |
-percepcja | 14 | +1 | 15 | **6 ** | **1k10** |
-siła woli | 16 | 0 | 16 | **7 ** | **1k12** |
-charyzma | 13 | +1 | 14 | **6 ** | **1k10** |
+percepcja | 14 | *+1* | 15 | **6 ** | **1k10** |
+siła woli | 16 | *0* | 16 | **7 ** | **1k12** |
+charyzma | 13 | *+1* | 14 | **6 ** | **1k10** |
 
 
-### Skills
-\# | Skill | Ability |
-:--:|-----|:------:|
-.| Acrobatics | DEX |
-.| Animal Handling | WIS |
-.| Arcana | INT |
-.| Athletics | STR |
-.| Deception | CHA |
-.| History | INT |
-.| Insight | WIS |
-.| Intimidation | CHA |
-.| Investigation | INT |
-.| Medicine | WIS |
-.| Nature | WIS |
-.| Perception | WIS |
-.| Performance | CHA |
-.| Persuasion | CHA |
-.| Religion | INT |
-.| Sleight of Hand | DEX |
-.| Stealth | DEX |
-.| Survival | WIS |
+# Czary
+Czar | Wątki | Trudność utkania | Zasięg | Czas trwania |
+:--:|-----|:------:|:---:|:---:|
+Doświadczenie śmierci| 1 | 6/12 | 20m | 3 + poziom |
+Krąg zimna | 2 | 6/15 | dotyk | 6 + poziom |
+Pojedynek woli | 0 | 0/7  | 10m | 3 + poziom |
+Zwierzęta nocy | 1 | 5/13 | 120m | 3 + poziom |
+
+
 
 # Traits
 
