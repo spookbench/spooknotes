@@ -23,7 +23,7 @@ greeting = '🌞 Good Afternoon, Spook'
 dv.header(2, greeting)
 ```
 
-# <center>Farouk</center> 
+# <center>Spook data center</center> 
  
 
 > [!cards|3]
@@ -40,15 +40,4 @@ dv.header(2, greeting)
 >**[[60. Life Areas\|Life Areas]] — #lifeareas**  <br> **[[70. Life Action\|Action Management]] — #action**  
 >
 
-
-
->[!multi-column|right|2]
->
->> [!danger]+ Life Progress メメント・モリ
->> ![[Life Progress]]
->
->> [!important]+ Countdown カウントダウン
->> ![[Countdown]]
-
----
 
