@@ -11,7 +11,7 @@ modifier:
 
 
 ||
-----|:---:|
+:----|:---:|
 **Dyscyplina** | Ksenomanta
 **Krąg** | 2
 **Rasa** | T'skrang
