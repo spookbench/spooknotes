@@ -44,7 +44,7 @@ So, how does it work?
 At it's core, Copper's "instruction set" is very simple, there are only three of them: `MOVE`, `WAIT` and `SKIP`.  
 - `MOVE` modifies the state of a given register. It can modify most of the Amiga special registers - for example `BPLXPTH` and `BPLXPTL` which are responsible setting up bitplanes.  
 - `WAIT` tells Cooper to wait for until the video beam reaches the specific coordinates on the screen. While it's in a waiting state, it frees the bus. 
-- In the ideal world all our code runs fast enough our Copper instructions can be executed at the exact beam positions we want. In reality, sometimes this is not the case - maybe some calculations took longer than expected, maybe BIillter hogged the bus, and by the time Copper got to instruction it was supposed to execute at the beginning of line 23, the beam already reached line 24. What now? By default, Copper will just execute this instruction anyway. Sometimes this is not a big problem, like in our sky gradient example above, world won't end if we change the color one line later.
+- In the ideal world all our code runs fast enough our Copper instructions can be executed at the exact beam positions we want. In reality, sometimes this is not the case - maybe some calculations took longer than expected, maybe BIillter hogged the bus, and by the time Copper got to instruction it was supposed to execute at the beginning of line 23, the beam already reached line 24. What now? By default, Copper will just execute this instruction anyway. Sometimes this is not a big problem, like in our sky gradient example above, world won't end if we change the color one line later. But oftentimes 
 
 ## Blitter
 
