@@ -36,7 +36,7 @@ It's a simple, yet powerful tool that gives you almost a full control over the v
 Copper list consists of a programmer-defined set of instructions that will be called once every frame, either during a *vertical blanking period* or when the beam hits a specific coordinates on the screen. 
 For example, it's very commonly used for various palette modifications, look at this screenshot from a popular Amiga game *"Shadow of the beast"*: 
 
-![[sotb.webp]]
+![sotb](sotb.webp)
 
 Do you see the blocky blue-pink gradient on the sky? In reality, the whole sky background is a solid color - but the Copper is programmed to change this one color every X lines mid-frame, which results in this nice, atmospheric sunset. Other examples usages include modifying sound registers and setting up and starting Blitter (more about it in a minute). 
 
@@ -71,18 +71,18 @@ for every effects. We will re-visit them both in the future, since explaining ho
 #### Bitplanes and playfields
 It will be easiest to explain on an example. Look:
 
-![[dragon_full.png]]
+![dragon.png](./assets/dragon_full.png)
 
 Its resolution is 320 x 256 and it uses 16 colors, so a standard lores PAL full screen image. We are also going to use all five bitplanes. What are bitplanes? It's closely related to depth of the image we want to display. Imagine five monochrome layers, placed on top of each other to form the full, colored picture. How?
 
-![[bitplanes.png]]
+![bitplanes.png](./assets/bitplanes.png)
 
 To determine the color of each pixel, Amiga fetches the value of this pixel on every bitplane and puts them together, to find the index of the color register that it's supposed to use. 
 Example below shows a hypothetical bitmap, with the value of the first pixel for each bitplane marked as either `1` (black square) or `0` (white square). After putting them together we get `11010` (`0x1A`) which is the index of the color register that holds the final color of this particular pixel. In our example, the pixel will be light blue.
 
 GIF below illustrates how our picture will look if we reduce the number of displayed bitplanes:
 
-![[bitplanes.gif]]
+![bitplanes.gif](./assets/bitplanes.gif)
 
 Bitplanes are grouped into *playfields*. You can think of them as container. It's possible to display one or two playfields at the same time. The latter scenario is called the *Dual Playfield Mode*.
 It creates two "layers" that can be manipulated separately. This mode is often used for games, where one playfield displays the actual game, while the second playfield, containing a status bar/icons/menus is overlaid on top of it.
