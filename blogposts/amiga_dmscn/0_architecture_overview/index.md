@@ -30,7 +30,7 @@ It's clearly divided into two main sections - the realm of the CPU and a custom 
 Custom chips are the backbone of the Amiga system, taking most of the load off of the m68000 CPU to manage audio, video and and I/O. 
 Let's take a looks as some of the most useful features they provide, starting with the two coprocessors that live inside the Agnus chip.
 
-## Copper
+### Copper
 
 It's a simple, yet powerful tool that gives you almost a full control over the video system, via the feature called *Copper lists*. 
 Copper list consists of a programmer-defined set of instructions that will be called once every frame, either during a *vertical blanking period* or when the beam hits a specific coordinates on the screen. 
@@ -47,20 +47,19 @@ At it's core, Copper's "instruction set" is very simple, there are only three of
 - In the ideal world all our code runs fast enough our Copper instructions can be executed at the exact beam positions we want. In reality, sometimes this is not the case - maybe some calculations took longer than expected, maybe BIitter hogged the bus, and by the time Copper got to instruction it was supposed to execute at the beginning of line 23, the beam already reached line 24. What now? By default, Copper will just execute this instruction anyway. Sometimes this is not a big problem, like in our sky gradient example above, world won't end if we change the color one line later. But oftentimes it's better to omit it altogether in a given frame. This is when the `SKIP` can aid us. 
   It takes X and Y coordinates (just like `MOVE`) and lets us to skip the instruction that comes immediately after it if the video beam is already past them.
 
-There are a few important Copper's limitations. One of them is that due to memory timings, in the absolute best case scenario, we can execute one Copper instruction every 8 pixels on the screen. 
-Another thing we need to keep in mind is that it can't affect memory contents directly, only the registers. We can work around it by  
+There are a few important Copper's limitations. One of them is that due to memory timings, in the absolute best case scenario, we can execute one instruction every 8 pixels on the screen. 
+Another thing we need to keep in mind is that it can't affect memory contents directly, only the registers. But, as mentioned above, we can use Copper list to set up and run Blitter, which is another powerful tool in our disposal. 
 
-## Blitter
+### Blitter
 
-
+// TODO
 
 
 ### How the image is made
-As demosceners, we need to know exactly how Amiga generates the picture. It's a bit complex, but after getting into it, you'll realize it 
-provides us a wide range of tools we can use to do some pretty sick stuff. So let's start with the basic stuff...
+As demosceners, we need to know exactly how Amiga generates the picture. It's a bit complex process, but after getting into it, you'll realize it provides us a wide range of tools we can use to do some pretty sick stuff. 
 
-#### ...display modes 
-On OCS, we have four "primary" modes:
+#### Display modes 
+In OCS, we have four "primary" modes:
 
 - Low resolution, called *lores*. It supports 32 colors and for NTSC systems it's 320 x 200, for PAL - 320 x 256.
 - High resolution, *hires* mode. Drops to only 16 colors, but we get 320 x 400 (NTSC) or 640 x 256 (PAL).
@@ -69,9 +68,7 @@ On OCS, we have four "primary" modes:
 Simple, right? Well... there's more! There are also two special modes - *HAM (Hold and modify)* and *EHB (Extra Half Brite)*. They provide the ability to display more colors (4096 for HAM and 64 for EHB), but they come with their own quirks and constraints, which makes them not suitable
 for every effects. We will re-visit them both in the future, since explaining how exactly HAM works deserves it's own post.
 
-Most of our beginner-friendly effects will be using lores mode, until you'll get a good grasp of...
-
-#### ...bitplanes and playfields
+#### Bitplanes and playfields
 It will be easiest to explain on an example. Look:
 
 ![[dragon_full.png]]
@@ -83,29 +80,28 @@ Its resolution is 320 x 256 and it uses 16 colors, so a standard lores PAL full 
 To determine the color of each pixel, Amiga fetches the value of this pixel on every bitplane and puts them together, to find the index of the color register that it's supposed to use. 
 Example below shows a hypothetical bitmap, with the value of the first pixel for each bitplane marked as either `1` (black square) or `0` (white square). After putting them together we get `11010` (`0x1A`) which is the index of the color register that holds the final color of this particular pixel. In our example, the pixel will be light blue.
 
-GIF below ilustrates how our picture will look if we reduce the number of displayed bitplanes:
+GIF below illustrates how our picture will look if we reduce the number of displayed bitplanes:
 
-![aaaa](bitplanes.gif)
+![[bitplanes.gif]]
 
 Bitplanes are grouped into *playfields*. You can think of them as container. It's possible to display one or two playfields at the same time. The latter scenario is called the *Dual Playfield Mode*.
 It creates two "layers" that can be manipulated separately. This mode is often used for games, where one playfield displays the actual game, while the second playfield, containing a status bar/icons/menus is overlaid on top of it.
 While using dual playfield, each of them can contain up to three bitplanes each - one playfield contains bitplanes 1, 3 and 5, while the other 2, 4 and 6. 
-// TO DO - dodać notatkę o rozłożeniu kolorów między playfieldami
+
+// TODO: dodać notatkę o tym jak kolory rozkładają się między playfieldami.
 
 #### Sprites
 Sprites are special entities, that live beyond bounds of playfields and bitplanes. There are 8 available sprites, grouped by two, which means they have some shared attributes. 
-Each sprite is 16px wide and can have unlimited height. They can have up to three colors (+ transparency), the palette is set per-group, which means sprites 0 and 1 will share the same three colors,
+Each sprite is 16 px wide and can have unlimited height. They can have up to three colors (+ transparency), the palette is set per-group, which means sprites 0 and 1 will share the same three colors,
 while sprites 2 and 3 will have their own set of colors and so on. 
-Another thing that is specific for each sprite in a group is their display priority relative to playfields. The "Amiga Hardware Reference Manual" uses the hand analogy to illustrate how it works and I think
-it's too cute not to share:
+Another thing that is specific for each sprite in a group is their display priority relative to playfields. The "Amiga Hardware Reference Manual" books uses the hand analogy to illustrate how it works and I think
+it's too cute not to share in its original form:
 
 ![sprite priority hand image here](./assets/video_priority.gif)
 
-The order can be modified by using the <code>BPLCON2</code> register (which stands, of course, for _"bitplane control register 2"_, and yes, there is also <code>BPLCON1</code>).
+The order can be modified by using the `BPLCON2` register (which stands, of course, for _"bitplane control register 2"_, and yes, there is also `BPLCON1`).
 
-The sprite groups support a mode called "attached", where instead of two sprites, the whole group functions as one sprite. The maximum size stays the same, but each pixel uses four bits to address its color register 
-(instead of two bits used normally) which results in up to 15 possible colors (which are color registers used by sprites).
-
+The sprite groups support a mode called "attached", where instead of two sprites, the whole group functions as one sprite. The maximum size stays the same, but each pixel uses four bits to address its color register (instead of two bits used normally) which results in up to 15 possible colors (which are color registers used by sprites).
 
 #### Scrolling
 Each playfield can also be scrolled independently from each other, both vertically and horizontally. 
@@ -122,12 +118,15 @@ To scroll the bitmap horizontally, more legwork is required. First, you need to 
 - You can tell it to start fetching the data early
 Those three observations can already hint what do we need to do to achieve smooth scrolling.
 
-// Vertical scrolling gif here
+// TODO: Więcej wyjaśnień
+
+// TODO: Vertical scrolling gif here
 
 
-<div>
-reee
-</div>
+### Additional resources
+
+- ["Amiga Hardware Reference Manual"](http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0000.html) - the holy book
+- ["Produkcja demoscenowa 2021" [YT][PL]](https://www.youtube.com/watch?v=JNBI3LKWMsM&list=PL-uCI5sq2RyT-WPH8NqA0bd4Q9oNF0sx0) - recordings of a series of lectures I had a pleasure to attend in 2021. This is a source of most of my current knowledge. Sadly it's only available in polish and some recordings have ugly audio clipping.
 
 
 
