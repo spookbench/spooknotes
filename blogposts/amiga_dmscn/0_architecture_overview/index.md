@@ -36,7 +36,7 @@ It's a simple, yet powerful tool that gives you almost a full control over the v
 Copper list consists of a programmer-defined set of instructions that will be called once every frame, either during a *vertical blanking period* or when the beam hits a specific coordinates on the screen. 
 For example, it's very commonly used for various palette modifications, look at this screenshot from a popular Amiga game *"Shadow of the beast"*: 
 
-![sotb](sotb.png)
+![sotb](./assets/sotb.png)
 
 Do you see the blocky blue-pink gradient on the sky? In reality, the whole sky background is a solid color - but the Copper is programmed to change this one color every X lines mid-frame, which results in this nice, atmospheric sunset. Other examples usages include modifying sound registers and setting up and starting Blitter (more about it in a minute). 
 
