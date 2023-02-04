@@ -34,20 +34,17 @@ Let's take a looks as some of the most useful features they provide.
 
 Inside Agnus lives the Amiga's coprocessor, *Copper*.  It's a simple, yet powerful tool that gives you almost a full control over the video system, via the feature called *Copper lists*. 
 Copper list consists of a programmer-defined set of instructions that will be called once every frame, either during a *vertical blanking period* or when the beam hits a specific X,Y cooridnates on the screen. 
-For example, it's very commonly used for various palette modifications, look at this screenshot from a game *"Shadow of the beast"*:
+For example, it's very commonly used for various palette modifications, look at this screenshot from a game *"Shadow of the beast"*: 
 
 [screenshot goes here]
 
 Do you see the blue-pink gradient on the sky? In reality, the whole sky background is a solid color - but the Copper is programmed to change this one color every X lines mid-frame, which results in this nice, atmospheric sunset. 
 
-Other example usages of Copper include:
-
-[think of some examples]
-
-How does it work?
-- WAIT instruction
-- CopMove
-- Switching lists 
+So, how does it work?
+At it's core, Copper's "instruction set" is very simple, there are only three of them: `MOVE`, `WAIT` and `SKIP`.  
+- `MOVE` modifies the state of a given register. It can modify most of the Amiga special registers - for example `BPLXPTH` and `BPLXPTL` which are responsible setting up bitplanes.  
+- `WAIT` tells Cooper to wait for until the video beam reaches the specific coordinates on the screen. While it's in a waiting state, it frees the bus. 
+- In the ideal world all our code runs fast enough our Copper instructions can be executed at the exact beam positions we want. In reality, sometimes this is not the case - maybe some calculations took longer than expected, maybe BIillter hogged the bus, and by the time Copper got to instruction it was supposed to execute at the beginning of line 23, the beam already reached line 24. What now? By default, Copper will just execute this instruction anyway. Sometimes this is not a big problem, like in our sky gradient example above, world won't end if we change the color one line later.
 
 ## Blitter
 
@@ -62,7 +59,7 @@ provides us a wide range of tools we can use to do some pretty sick stuff. So le
 On OCS, we have four "primary" modes:
 
 - Low resolution, called *lores*. It supports 32 colors and for NTSC systems it's 320x200, for PAL - 320x256.
-- High resolution, *hires* mode. Drops to only 16 colors, but we get 320x400 (NTSC) or 640x256 (PAL).
+- High resolution, *hires* mode. Drops to only 16 colors, but weget 320x400 (NTSC) or 640x256 (PAL).
 - Remaining two are *interlaced* version of the previous ones. As you can imagine, the number of colors and vertical resolution stays the same, but the horizontal resolution is doubled.
 
 Simple, right? Well... there's more! There are also two special modes - *HAM (Hold and modify)* and *EHB (Extra Half Brite)*. They provide the ability to display more colors (4096 for HAM and 64 for EHB), but they come with their own quirks and constraints, which makes them not suitable
