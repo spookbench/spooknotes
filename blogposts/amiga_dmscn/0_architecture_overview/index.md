@@ -20,7 +20,7 @@ It consists of a few important parts: **custom chips** and **fast/chip/"slow" RA
 
 
 ![[diagram.png]]
-
+// TODO: dokończyć diagram (dodać opisy szyn)
 
 It's clearly divided into two main sections - the realm of the CPU and a custom chip section. Before we'll get to the chipset itself, it's important to explain how the RAM works. As you can see, there are three types of it, living in different parts of the system. What's the difference?
 - **Fast RAM** - this is the memory that the custom chips can't use. Because of that, the CPU is free to access it at full speed at any given time (hence the name). It's optional, requiring an additional expansion memory card.
@@ -36,7 +36,7 @@ It's a simple, yet powerful tool that gives you almost a full control over the v
 Copper list consists of a programmer-defined set of instructions that will be called once every frame, either during a *vertical blanking period* or when the beam hits a specific coordinates on the screen. 
 For example, it's very commonly used for various palette modifications, look at this screenshot from a popular Amiga game *"Shadow of the beast"*: 
 
-![sotb](sotb.webp)
+![sotb](sotb.png)
 
 Do you see the blocky blue-pink gradient on the sky? In reality, the whole sky background is a solid color - but the Copper is programmed to change this one color every X lines mid-frame, which results in this nice, atmospheric sunset. Other examples usages include modifying sound registers and setting up and starting Blitter (more about it in a minute). 
 
