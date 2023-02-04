@@ -28,11 +28,11 @@ It's clearly divided into two main sections - the realm of the CPU and a custom 
 - **"Slow" RAM (also know as "pseudo fast" RAM)** - this one is a bit tricky. In A1000 the Agnus chip could address only 512K of RAM. In early revisions of A500 it was replaced with "Fat Agnus" which still supported only 512K of *chip* RAM, but also allowed to add another 512K of memory that is neither chip RAM nor a true fast RAM.  
 
 Custom chips are the backbone of the Amiga system, taking most of the load off of the m68k CPU to manage audio, video and and I/O. 
-Let's take a looks as some of the most useful features they provide.
+Let's take a looks as some of the most useful features they provide, starting with the two coprocessors that live inside the Agnus chip.
 
 ## Copper
 
-Inside Agnus lives the Amiga's coprocessor, *Copper*.  It's a simple, yet powerful tool that gives you almost a full control over the video system, via the feature called *Copper lists*. 
+It's a simple, yet powerful tool that gives you almost a full control over the video system, via the feature called *Copper lists*. 
 Copper list consists of a programmer-defined set of instructions that will be called once every frame, either during a *vertical blanking period* or when the beam hits a specific X,Y cooridnates on the screen. 
 For example, it's very commonly used for various palette modifications, look at this screenshot from a game *"Shadow of the beast"*: 
 
