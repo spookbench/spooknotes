@@ -1,6 +1,18 @@
 {
   "accentColor": "#e3761c",
-  "cssTheme": "Shiba Inu",
-  "theme": "obsidian",
-  "baseFontSize": 15
+  "cssTheme": "Shiba Uni",
+  "theme": "moonstone",
+  "baseFontSize": 15,
+  "enabledCssSnippets": [
+    "【Main】ITS callouts (infobox, cards)",
+    "【Main】ITS theme Image Adjustment",
+    "【Main】Minimal Cards",
+    "【Others】MCL Gallery Cards",
+    "【Theme】clean embdeds all",
+    "【Tool】MInimal Circle Images",
+    "【Main】MCL Multi Column",
+    "【Tool】MInimal Image Zoom",
+    "image_adjustments",
+    "center_tables"
+  ]
 }
