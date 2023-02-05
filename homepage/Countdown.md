@@ -1,22 +1,23 @@
 %%code and counting and notes%%
 %%Using Rainbel plugin%%
 
+<p class="stickies";>
+<b> COUNTDOWN <font color="#ff0000"><font color="#ff0000">IMPORTANT</font></font> </b><br>
+Revision | <%+* let edate = moment("2023-04-07", "yyyy-MM-DD"); let from = moment().startOf('day'); edate.diff(from, "days") >= 0 ? tR += edate.diff(from, "days") : tR += edate.add(1, "year").diff(from, "days") %> days.</br>
+<!-- --- -->
+</p>
 
 <p class="stickies";>
 <b> COUNTDOWN <font color="#ff0000"><font color="#ff0000">IMPORTANT</font></font> </b><br>
-Important  | <%+* let edate = moment("2023-12-31", "yyyy-MM-DD"); let from = moment().startOf('day'); edate.diff(from, "days") >= 0 ? tR += edate.diff(from, "days") : tR += edate.add(1, "year").diff(from, "days") %> days.</br>
+Matura matematyka  | <%+* let edate = moment("2023-05-12", "yyyy-MM-DD"); let from = moment().startOf('day'); edate.diff(from, "days") >= 0 ? tR += edate.diff(from, "days") : tR += edate.add(1, "year").diff(from, "days") %> days.</br>
 <!-- --- -->
 </p>
 
 <p class="stickies";>
-<b> COUNTDOWN <font color="#0070c0">MEETINGS</font> </b><br>
-Business | <%+* let edate = moment("2022-02-08", "yyyy-MM-DD"); let from = moment().startOf('day'); edate.diff(from, "days") >= 0 ? tR += edate.diff(from, "days") : tR += edate.add(1, "year").diff(from, "days") %> days.</br>
- Personal in <%+* let edate = moment("2023-03-01", "yyyy-MM-DD"); let from = moment().startOf('day'); edate.diff(from, "days") >= 0 ? tR += edate.diff(from, "days") : tR += edate.add(1, "year").diff(from, "days") %> days.</br>
+<b> COUNTDOWN <font color="#ff0000"><font color="#ff0000">IMPORTANT</font></font> </b><br>
+Matura informatyka  | <%+* let edate = moment("2023-05-22", "yyyy-MM-DD"); let from = moment().startOf('day'); edate.diff(from, "days") >= 0 ? tR += edate.diff(from, "days") : tR += edate.add(1, "year").diff(from, "days") %> days.</br>
 <!-- --- -->
 </p>
-
-
-
 
 
 %%BLANK TEMPLATE HERE%%

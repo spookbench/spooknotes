@@ -64,10 +64,7 @@ dv.paragraph(greeting);
 
 
 
->[!multi-column|right|2]
->
->> [!danger]+ Life Progress メメント・モリ
->> ![[Life Progress]]
+>[!multi-column|right|1]
 >
 >> [!important]+ Countdown カウントダウン
 >> ![[Countdown]]

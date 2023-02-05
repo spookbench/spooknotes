@@ -38,7 +38,7 @@ For example, it's very commonly used for various palette modifications, look at 
 
 ![sotb](./assets/sotb.png)
 
-Do you see the blocky blue-pink gradient on the sky? In reality, the whole sky background is a solid color - but the Copper is programmed to change this one color every X lines mid-frame, which results in this nice, atmospheric sunset. Other examples usages include modifying sound registers and setting up and starting Blitter (more about it in a minute). 
+Do you see the blocky blue-pink gradient on the sky? In reality, the whole sky background is a solid color - but the Copper is programmed to change this one color every X lines mid-frame, which results in this nice, atmospheric sunset. Other examples usages include modifying sound registers and setting up and starting Blitter (more about it in a minute).
 
 So, how does it work?
 At it's core, Copper's "instruction set" is very simple, there are only three of them: `MOVE`, `WAIT` and `SKIP`.  
@@ -51,8 +51,13 @@ There are a few important Copper's limitations. One of them is that due to memor
 Another thing we need to keep in mind is that it can't affect memory contents directly, only the registers. But, as mentioned above, we can use Copper list to set up and run Blitter, which is another powerful tool in our disposal. 
 
 ### Blitter
+This is Amiga's second coprocessor that can work in one of two modes: *line mode* and *block move mode*. 
 
-// TODO
+#### Line mode
+Like name suggests, in this mode Blitter can efficiently draw textured lines on the screen using the ![Bresenham's alghorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm). The max length of one line is 1024 pixels. 
+It's possible to draw simple shapes and fill them with color.
+
+#### Block move mode
 
 
 ### How the image is made
