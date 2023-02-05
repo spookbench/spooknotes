@@ -1,7 +1,7 @@
 {
   "accentColor": "#e3761c",
   "cssTheme": "Shiba Uni",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "baseFontSize": 15,
   "enabledCssSnippets": [
     "【Main】ITS callouts (infobox, cards)",
