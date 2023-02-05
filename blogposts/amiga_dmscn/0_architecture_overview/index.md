@@ -54,7 +54,7 @@ Another thing we need to keep in mind is that it can't affect memory contents di
 This is Amiga's second coprocessor that can work in one of two modes: *line mode* and *block move mode*. 
 
 #### Line mode
-Like name suggests, in this mode Blitter can efficiently draw textured lines on the screen using the ![Bresenham's alghorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm). The max length of one line is 1024 pixels. 
+Like name suggests, in this mode Blitter can efficiently draw textured lines on the screen using the [Bresenham's alghorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm). The max length of one line is 1024 pixels. 
 It's possible to draw simple shapes and fill them with color.
 
 #### Block move mode
