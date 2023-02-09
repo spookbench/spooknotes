@@ -1,13 +1,5 @@
 {
-  "calendar:show-calendar-view": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "`"
-    }
-  ],
-  "theme:use-light": [
+  "theme:use-dark": [
     {
       "modifiers": [
         "Mod"
@@ -15,7 +7,7 @@
       "key": "PageUp"
     }
   ],
-  "theme:use-dark": [
+  "theme:use-light": [
     {
       "modifiers": [
         "Mod"
