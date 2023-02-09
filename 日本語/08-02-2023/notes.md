@@ -3,10 +3,6 @@
 私はプログラマーとしてはたらいています。　
 はじめまして、みんなさん！
 
-*Watashi wa Ola desu. Nijū roku sai desu. Nihiki no petto o katte imasu - inu to usagi.
-Watashi wa purogramma toshite wa hataraite imasu.
-Hajimemashite minna san
-
 ## Wearing stuff
 
 #### above waist
@@ -15,7 +11,7 @@ Hajimemashite minna san
 
 
 はく - wear something on legs/feet (for example, shoes or a skirt)
-する - wear misc stuff (wristwatch, gloves, scarf, tie, jewerly etc)
+する - wear misc stuff (wristwatch, gloves, scarf, tie, jewellery etc)
 
 ## 〜ている
 
