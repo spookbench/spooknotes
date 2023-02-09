@@ -11,8 +11,8 @@
   "url-into-selection",
   "obsidian-banners",
   "obsidian-markdown-furigana",
-  "obsidian-to-anki-plugin",
   "obsidian-5e-statblocks",
   "templater-obsidian",
-  "buttons"
+  "buttons",
+  "obsidian-to-anki-plugin"
 ]
