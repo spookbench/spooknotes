@@ -3,6 +3,8 @@
 私はプログラマーとしてはたらいています。　
 はじめまして、みんなさん！
 
+watashi no namae wa ola desu. nijuu roku sai desu. nibiki no petto o katteimasu - inu to usagi desu.
+watashi wa purogaramaa toshite hataraiteimasu. hajimemashite minna san!
 ## Wearing stuff
 
 #### above waist
