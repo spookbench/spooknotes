@@ -15,6 +15,12 @@
 14. コーヒーを**のんで**。
 
 
-## 〜てください、
+## 〜て　ください、〜ないで　ください。
+Please do/please don't do something.
+
+*れい：*
+- 今からよみますから**聞いてください**。 *I am reading now, please listen.*
+- 皆さん、テレビを**みてください**。　　*Everyone, please look at the TV.*
+
 
 ![[〜ている]]
