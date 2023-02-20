@@ -1,25 +1,20 @@
-1. migaite
-2. aratte
-3. abite
-4. shite
-5. kaite
-6. yonde
-7. mitte
-8. kiite
-9. itte
-10. kaette
-11. okite
-12. nete
-13. tabete
-14. nonde
-okite, kooh o nonde, turamo o notte, hirugohan o tabete, iie o kaette, hataraite sorekara nihongo no jugyou o 
-## te form as connective form 
-#### Present
-はをみがいて、かおをあらって、それからシャワーをあびます。
-～て、～て、それから　～。
-#### Past tense
-はをみがいて、かおをあらって、それからシャワーをあびました。
+**1)** Describe images using 〜て form:
+1. はを**みがいて**。
+2. かおを**あらって**。
+3. シャワーを**あびて**。
+4. べんきょう**して**。
+5. てがみを**かいて**。
+6. しんぶんを**よんで**。
+7. テレビを**みて**。
+8. おんがくを**きいて**。
+9. がっこうを**いって**。
+10. うちに**かえって**。
+11. **おきて**。
+12. **ねて**。
+13. ごはんを**たべて**。
+14. コーヒーを**のんで**。
 
-**The order of events has to be chronological.**
+
+## 〜てください、
 
 ![[〜ている]]
