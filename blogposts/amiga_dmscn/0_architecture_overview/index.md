@@ -3,18 +3,19 @@
 
 Before we will dive into code, it's good to get to know the machine we are going to work with.
 
-Of course, we would like to be compatible with as many Amiga models as possible. *You* may have a maxed out A1200 with 060 CPU, lots of ram and a fancy graphics card, and sure, you can write something that will look nice on your machine, but that's not a setup majority of people have, so they wouldn't be able to experience your awesome production!
+Of course, we would like to be compatible with as many Amiga models as possible. Sure, *you* may have a maxed out A1200 with 060 CPU, lots of RAM and a fancy graphics card, and you can write something that will look nice on your machine, but that's not a setup majority of people have, so they wouldn't be able to experience your awesome production!
 
 That's why we are going to target the most classic Amiga possible: the vanilla **A500** rocking **1.3 Kickstart** with **1MB of chip ram** (512K + 512K trapdoor expansion card).
 
 This will give us possibility to run our code on pretty much anything 
 (sorry, Amiga 1000 ₍ᐢ.‸.ᐢ₎).
 
-### OCS, ECS... AGA? What is that?
-As you could deduce from the title, this series of posts is going to target the OCS Amiga. After reading a previous paragraph, you can probably
-guess A500 is an OCS Amiga. But what does it exactly mean?
+### OCS chipset
+As you could deduce from the title, this series of posts is going to target the OCS. But what does it exactly mean?
 
-**OCS** stands for **Original Chip Set**. It's the original version of the Amiga chipset, that started its life with A1000, then (after some revisions) got implemented in A500 and A2000. 
+**OCS** stands for **Original Chip Set**. It's a version of the Amiga chipset, that started its life with A1000, then (after some revisions) got implemented in A500 and A2000. 
+Later it was reworked a bit for the Amiga 3000 and introduced as **ECS**, **Enhanced Chip Set**. 
+In 1992 the last version of the chipset, **AGA** (**Advanced Graphics Architecture**) hit the market. 
 
 It consists of a few important parts: **custom chips** and **fast/chip/"slow" RAM sections**. Diagram below represents the system architecture:
 
@@ -51,14 +52,15 @@ There are a few important Copper's limitations. One of them is that due to memor
 Another thing we need to keep in mind is that it can't affect memory contents directly, only the registers. But, as mentioned above, we can use Copper list to set up and run Blitter, which is another powerful tool in our disposal. 
 
 ### Blitter
-This is Amiga's second coprocessor that can work in one of two modes: *line mode* and *block move mode*. 
+This is Amiga's second coprocessor responsible for efficient DMA operations on big blocks of the chip RAM. It's estimated that it's around two times faster than m68k at copying memory, which is very useful for all sorts of graphics-related operations. Blitter has two main modes - *line* and *block*.
 
 #### Line mode
 Like name suggests, in this mode Blitter can efficiently draw textured lines on the screen using the [Bresenham's alghorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm). The max length of one line is 1024 pixels. 
 It's possible to draw simple shapes and fill them with color.
 
 #### Block move mode
-
+As mentioned, Blitter can quickly copy and move memory around. But *block mode* is much more than that - through utilizing its four DMA channels, called **A**, **B**, **C** ("source" channels) and **D** ("destination"), it can perform complicated logic operation all sources to compile the final image on the fly. 
+Programming Blitter in this mode is a deep rabbit hole in itself, which we will explore in the future. 
 
 ### How the image is made
 As demosceners, we need to know exactly how Amiga generates the picture. It's a bit complex process, but after getting into it, you'll realize it provides us a wide range of tools we can use to do some pretty sick stuff. 
@@ -125,8 +127,7 @@ Those three observations can already hint what do we need to do to achieve smoot
 
 // TODO: Więcej wyjaśnień
 
-// TODO: Vertical scrolling gif here
-
+![horizontal scrolling explained](hscroll_amiga.gif)
 
 ### Additional resources
 
