@@ -5,7 +5,7 @@ Before we will dive into code, it's good to get to know the machine we are going
 
 Of course, we would like to be compatible with as many Amiga models as possible. Sure, *you* may have a maxed-out A1200 with 060 CPU, lots of RAM, and a fancy graphics card, and you can write something that will look nice on your machine, but that's not a setup majority of people have, so they wouldn't be able to experience your awesome production!
 
-That's why we are going to target the most classic Amiga possible: the vanilla **A500** rocking **1.3 Kickstart** with **1MB of ram** (512K + 512K trapdoor expansion card).
+That's why we are going to target the most classic Amiga possible: the vanilla **A500** rocking **Kickstart 1.3** and **1MB of ram** (512K + 512K trapdoor expansion card).
 
 This will give us the possibility to run our code on pretty much anything (sorry, Amiga 1000 ₍ᐢ.‸.ᐢ₎).
 
@@ -20,7 +20,6 @@ We are going to focus only on the first version of the chipset here, but don't w
 OCS consists of a few important parts: **custom chips** and **fast/chip/"slow" RAM sections**. The diagram below represents the system architecture:
 
 ![[diagram.png]]
-// TODO: dokończyć diagram (dodać opisy szyn)
 
 It's divided into two main sections - the realm of the CPU and a custom chip section. Before we'll get to the chipset itself, it's important to explain how the RAM works. As you can see, there are three types of it, living in different parts of the system. What's the difference?
 - **Fast RAM** - this is the memory that the custom chips can't use. Because of that, the CPU is free to access it at full speed at any given time (hence the name). It's optional, requiring an additional expansion memory card.
@@ -54,7 +53,7 @@ Another thing we need to keep in mind is that it can't affect memory contents di
 This is Amiga's second coprocessor responsible for efficient DMA operations on big blocks of the chip RAM. It's estimated that it's around two times faster than m68k at copying memory, which is very useful for all sorts of graphics-related operations. Blitter has two main modes - *line* and *block*.
 
 #### Line mode
-In this mode Blitter can efficiently draw textured lines on the screen using the [Bresenham's alghorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm). The max length of one line is 1024 pixels. 
+In this mode Blitter can efficiently draw textured lines on the screen using the [Bresenham's algorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm). The max length of one line is 1024 pixels. 
 It's possible to draw simple shapes and fill them with color.
 
 #### Block move mode
