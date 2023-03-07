@@ -46,7 +46,7 @@ CUSTOM CHIP SECTION ^htb4fYNV
 
 CHIP data bus ^QNlatJAn
 
-RGB address bus ^OJyp3hWj
+REG address bus ^OJyp3hWj
 
 CHIP address bus ^4lq5YC5o
 
@@ -894,8 +894,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 569,
-			"versionNonce": 1237785859,
+			"version": 573,
+			"versionNonce": 512700048,
 			"isDeleted": false,
 			"id": "pvFuw_5EkoXo48_dD5kwH",
 			"fillStyle": "hachure",
@@ -905,18 +905,18 @@ CPU data bus ^EB45zEYR
 			"opacity": 100,
 			"angle": 0,
 			"x": -577.2971796789304,
-			"y": -237.39807450276874,
+			"y": -237.39807450865084,
 			"strokeColor": "#862e9c",
 			"backgroundColor": "transparent",
-			"width": 351.6546806860696,
-			"height": 0.7493406259995368,
+			"width": 351.65468068606964,
+			"height": 0.7493406205247197,
 			"seed": 961663598,
 			"groupIds": [],
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604543,
+			"updated": 1678184745691,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -938,15 +938,15 @@ CPU data bus ^EB45zEYR
 					0
 				],
 				[
-					351.6546806860696,
-					-0.7493406259995368
+					351.65468068606964,
+					-0.7493406205247197
 				]
 			]
 		},
 		{
 			"type": "arrow",
-			"version": 498,
-			"versionNonce": 1871145133,
+			"version": 502,
+			"versionNonce": 1070259344,
 			"isDeleted": false,
 			"id": "aI6BJz26nzyz1bSqLc1su",
 			"fillStyle": "hachure",
@@ -956,18 +956,18 @@ CPU data bus ^EB45zEYR
 			"opacity": 100,
 			"angle": 0,
 			"x": -576.5804380889649,
-			"y": -207.1926089033675,
+			"y": -207.19260890133265,
 			"strokeColor": "#e67700",
 			"backgroundColor": "transparent",
 			"width": 350.93793909610423,
-			"height": 2.403582557803702,
+			"height": 2.4035825595668996,
 			"seed": 930222514,
 			"groupIds": [],
 			"roundness": {
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604543,
+			"updated": 1678184745691,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -990,14 +990,14 @@ CPU data bus ^EB45zEYR
 				],
 				[
 					350.93793909610423,
-					-2.403582557803702
+					-2.4035825595668996
 				]
 			]
 		},
 		{
 			"type": "arrow",
-			"version": 227,
-			"versionNonce": 1031963811,
+			"version": 228,
+			"versionNonce": 658936464,
 			"isDeleted": false,
 			"id": "C4iG6SVV3hCg7ppxp-s4u",
 			"fillStyle": "solid",
@@ -1018,7 +1018,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604543,
+			"updated": 1678184745690,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1043,8 +1043,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 187,
-			"versionNonce": 894421773,
+			"version": 188,
+			"versionNonce": 1889469072,
 			"isDeleted": false,
 			"id": "Lz1q5sCkm6Kr8Zmh4oUJm",
 			"fillStyle": "solid",
@@ -1065,7 +1065,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604543,
+			"updated": 1678184745694,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1278,8 +1278,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 298,
-			"versionNonce": 1829438339,
+			"version": 300,
+			"versionNonce": 1711863952,
 			"isDeleted": false,
 			"id": "Rbs4b1qfm-ezB7EmBL-To",
 			"fillStyle": "solid",
@@ -1300,7 +1300,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604543,
+			"updated": 1678184745692,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1333,8 +1333,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 537,
-			"versionNonce": 2142972461,
+			"version": 539,
+			"versionNonce": 30598768,
 			"isDeleted": false,
 			"id": "DM7VWo-d0nkoO5GW3WFZD",
 			"fillStyle": "solid",
@@ -1355,7 +1355,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604543,
+			"updated": 1678184745692,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1388,8 +1388,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 205,
-			"versionNonce": 1283824419,
+			"version": 207,
+			"versionNonce": 812651664,
 			"isDeleted": false,
 			"id": "qCoy6DObylEXBrEBWcuTP",
 			"fillStyle": "solid",
@@ -1410,7 +1410,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604543,
+			"updated": 1678184745693,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1597,8 +1597,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 571,
-			"versionNonce": 1767988557,
+			"version": 572,
+			"versionNonce": 66437264,
 			"isDeleted": false,
 			"id": "AkAo75wnCkb5c3eycPy_z",
 			"fillStyle": "solid",
@@ -1619,7 +1619,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604544,
+			"updated": 1678184745690,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1648,8 +1648,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 48,
-			"versionNonce": 1575463427,
+			"version": 49,
+			"versionNonce": 361535600,
 			"isDeleted": false,
 			"id": "JYIUxhv-RdEox-vJVaURz",
 			"fillStyle": "solid",
@@ -1670,7 +1670,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604544,
+			"updated": 1678184745692,
 			"link": null,
 			"locked": false,
 			"startBinding": null,
@@ -1695,8 +1695,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 254,
-			"versionNonce": 356658093,
+			"version": 255,
+			"versionNonce": 1572158576,
 			"isDeleted": false,
 			"id": "AuI8M4l838_tNJXULuXJH",
 			"fillStyle": "solid",
@@ -1717,7 +1717,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604544,
+			"updated": 1678184745693,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1746,8 +1746,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 39,
-			"versionNonce": 2013884835,
+			"version": 40,
+			"versionNonce": 725617264,
 			"isDeleted": false,
 			"id": "lLC_GD57Xlr0cEllXYH75",
 			"fillStyle": "solid",
@@ -1768,7 +1768,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604544,
+			"updated": 1678184745693,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -1793,8 +1793,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "arrow",
-			"version": 32,
-			"versionNonce": 2092576269,
+			"version": 33,
+			"versionNonce": 1232823952,
 			"isDeleted": false,
 			"id": "MqnuzgA53tEvRH_WjKPEH",
 			"fillStyle": "solid",
@@ -1815,7 +1815,7 @@ CPU data bus ^EB45zEYR
 				"type": 2
 			},
 			"boundElements": [],
-			"updated": 1677754604544,
+			"updated": 1678184745693,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -2237,7 +2237,7 @@ CPU data bus ^EB45zEYR
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754604544,
 			"link": null,
 			"locked": false
@@ -2265,7 +2265,7 @@ CPU data bus ^EB45zEYR
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754604544,
 			"link": null,
 			"locked": false
@@ -2293,7 +2293,7 @@ CPU data bus ^EB45zEYR
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754604544,
 			"link": null,
 			"locked": false
@@ -2319,7 +2319,7 @@ CPU data bus ^EB45zEYR
 			"seed": 554548973,
 			"groupIds": [],
 			"roundness": null,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754604544,
 			"link": null,
 			"locked": false,
@@ -2334,8 +2334,8 @@ CPU data bus ^EB45zEYR
 		},
 		{
 			"type": "text",
-			"version": 137,
-			"versionNonce": 961646861,
+			"version": 145,
+			"versionNonce": 907618416,
 			"isDeleted": false,
 			"id": "OJyp3hWj",
 			"fillStyle": "solid",
@@ -2348,23 +2348,23 @@ CPU data bus ^EB45zEYR
 			"y": -449.3286135678554,
 			"strokeColor": "#000000",
 			"backgroundColor": "#1864ab",
-			"width": 138.8962860107422,
+			"width": 138.0482940673828,
 			"height": 19.2,
 			"seed": 2126911757,
 			"groupIds": [],
 			"roundness": null,
-			"boundElements": null,
-			"updated": 1677754604544,
+			"boundElements": [],
+			"updated": 1678184793634,
 			"link": null,
 			"locked": false,
 			"fontSize": 16,
 			"fontFamily": 1,
-			"text": "RGB address bus",
-			"rawText": "RGB address bus",
+			"text": "REG address bus",
+			"rawText": "REG address bus",
 			"textAlign": "left",
 			"verticalAlign": "top",
 			"containerId": null,
-			"originalText": "RGB address bus"
+			"originalText": "REG address bus"
 		},
 		{
 			"type": "text",
@@ -2387,7 +2387,7 @@ CPU data bus ^EB45zEYR
 			"seed": 647876109,
 			"groupIds": [],
 			"roundness": null,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754604544,
 			"link": null,
 			"locked": false,
@@ -2423,7 +2423,7 @@ CPU data bus ^EB45zEYR
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754604544,
 			"link": null,
 			"locked": false
@@ -2451,7 +2451,7 @@ CPU data bus ^EB45zEYR
 			"roundness": {
 				"type": 2
 			},
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754604544,
 			"link": null,
 			"locked": false
@@ -2477,7 +2477,7 @@ CPU data bus ^EB45zEYR
 			"seed": 472151363,
 			"groupIds": [],
 			"roundness": null,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754604544,
 			"link": null,
 			"locked": false,
@@ -2511,7 +2511,7 @@ CPU data bus ^EB45zEYR
 			"seed": 2121970797,
 			"groupIds": [],
 			"roundness": null,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1677754610518,
 			"link": null,
 			"locked": false,
@@ -2523,40 +2523,6 @@ CPU data bus ^EB45zEYR
 			"verticalAlign": "top",
 			"containerId": null,
 			"originalText": "CPU data bus"
-		},
-		{
-			"type": "text",
-			"version": 2,
-			"versionNonce": 562737197,
-			"isDeleted": true,
-			"id": "xagyaeJJ",
-			"fillStyle": "hachure",
-			"strokeWidth": 1,
-			"strokeStyle": "solid",
-			"roughness": 1,
-			"opacity": 100,
-			"angle": 0,
-			"x": -338.4769267371859,
-			"y": -6.15202628152025,
-			"strokeColor": "#862e9c",
-			"backgroundColor": "transparent",
-			"width": 138.8962860107422,
-			"height": 19.2,
-			"seed": 42330,
-			"groupIds": [],
-			"roundness": null,
-			"boundElements": [],
-			"updated": 1677754604544,
-			"link": null,
-			"locked": false,
-			"fontSize": 16,
-			"fontFamily": 1,
-			"text": "RGB address bus",
-			"rawText": "RGB address bus",
-			"textAlign": "left",
-			"verticalAlign": "top",
-			"containerId": null,
-			"originalText": "RGB address bus"
 		}
 	],
 	"appState": {
@@ -2574,10 +2540,10 @@ CPU data bus ^EB45zEYR
 		"currentItemTextAlign": "left",
 		"currentItemStartArrowhead": "triangle",
 		"currentItemEndArrowhead": null,
-		"scrollX": 1223.3906586244466,
-		"scrollY": 1202.0659059114917,
+		"scrollX": 767.662085447515,
+		"scrollY": 539.5652514988899,
 		"zoom": {
-			"value": 0.8428187362961992
+			"value": 2
 		},
 		"currentItemRoundness": "round",
 		"gridSize": null,
