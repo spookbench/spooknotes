@@ -1,3 +1,4 @@
+# Amiga demoscene for beginners
 
 ## Part 0 - architecture overview
 
@@ -68,7 +69,7 @@ In OCS, we have four "primary" modes:
 
 - Low resolution, called *lores*. It supports 32 colors and for NTSC systems it's 320 x 200, and for PAL - 320 x 256.
 - High resolution, *hires* mode. Drops to only 16 colors, but we get 320 x 400 (NTSC) or 640 x 256 (PAL).
-- Remaining two are *interlaced* version of the previous ones. As you can imagine, the number of colors and vertical resolution stays the same, but the horizontal resolution is doubled.
+- Remaining two are *interlaced* version of the previous ones. As you can imagine, the number of colors and horizontal resolution stays the same, but the vertical resolution is doubled.
 
 Simple, right? Well... there's more! There are also two special modes - *HAM (Hold and Modify)* and *EHB (Extra Half Brite)*. They provide the ability to display more colors (4096 for HAM and 64 for EHB), but they come with their quirks and constraints, which makes them not suitable
 for every effect. We will revisit them both in the future, since explaining how exactly HAM works deserves its own post.
