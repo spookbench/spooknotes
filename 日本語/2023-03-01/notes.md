@@ -17,6 +17,8 @@ okite, koohi o nonde, kaimono shite, kiji wo kakimashita, sorekara geemu o shima
 ね**る**　ー＞　ね**ないで**
 す**う**　ー＞　す**わない**
 
+**ある　ー＞　ない　　！！！**
+
 ### 動詞 ど う し グループ2
 たべ**る**　ー＞たべ**ない**
 み**る**　ー＞　み**ない**
@@ -27,7 +29,6 @@ okite, koohi o nonde, kaimono shite, kiji wo kakimashita, sorekara geemu o shima
 する　ー＞　しない
 
 
-## lesson topic 2
 
 
 ---
