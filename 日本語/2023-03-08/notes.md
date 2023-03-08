@@ -24,6 +24,7 @@ time, age - kun reading
 あげる - to give (a present etc.)
 もらう - to receive (a present etc.)
 来月 - らいげつ - next month
+{見|み}せる - to show something
 - [ ] Anki'd
 
 
