@@ -23,4 +23,4 @@ Please do/please don't do something.
 - 皆さん、テレビを**みてください**。　　*Everyone, please look at the TV.*
 
 
-![[〜ている]]
+![[日本語/grammar/〜ている]]
