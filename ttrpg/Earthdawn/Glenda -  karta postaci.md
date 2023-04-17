@@ -12,58 +12,58 @@ modifier:
 
 ||
 :----|:---:|
-**Dyscyplina** | Ksenomanta
+**Dyscyplina** | Iluzjonista
 **Krąg** | 2
-**Rasa** | T'skrang
-**Wzrost** | 177cm
-**Waga** | 98kg
+**Rasa** | Człowiek
+**Wzrost** | 183cm
+**Waga** | 63kg
 
 ---
 # Współczynniki
 
 ### Zdrowie 
 
-punkty obrażeń | *48* |
+punkty obrażeń | *x* |
 :---:|:---:|
 
 próg ran | próg przytomności | próg życia | testy zdrowienia | kostki akcji |
 :---:|:---:|:---:|:---:|:---:|
-9 | 38 | 45 | *2* | **k10** |
+0 | 0 | 0 | *0* | **k** |
 
 ### Obrona
 fizyczna | magiczna | społeczna |
 :---:|:---:|:---:|
-|8|8|8|
+| 0 | 0 | 0 |
 
 ### Pancerz
 fizyczny | duchowy | 
 :---:|:---:|
-| 11 | 3 |
+| 0 | 0 |
 
 ### Siła
 udźwig | max |
 :---:|:---:|
-40 | 80 |
+0 | 0 |
 
 ### Szybkość
 w walce | pełna |
 :---:|:---:|
-33 | 65 |
+0 | 0 |
 
 ### Inicjatywa
 stopień ZR | modyfikator ZB i T | stopień | kostka akcji |
 :---:|:---:|:---:|:---:|
-6 | *-3* | = 3 | **k4** |
+0 | *0* | = 0 | **k** |
 
 ### Karma
 aktualna | maksymalna | koszt | kostka akcji |
 :---:|:---:|:---:|:---:|
-*21* | 25 | 8 PL | **k6** |
+*0* | 0 | 0 PL | **k** |
 
 ### Punkty legend
 aktualne | wszystkie |
 :---:|:---:|
-*165*  | 6265 |
+*0*  | 0 |
 
 ---
 # Cechy
