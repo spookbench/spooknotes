@@ -1,4 +1,4 @@
----
+ślę---
 tags: ttrpg
 cssclass: hcl, table, t-c, readable
 ---
@@ -8,7 +8,7 @@ cssclass: hcl, table, t-c, readable
 ||
 :----|:---:|
 **Dyscyplina** | Iluzjonista
-**Krąg** | 2
+**Krąg** | 1
 **Rasa** | Człowiek
 **Wzrost** | 155cm
 **Waga** | 54kg
@@ -103,7 +103,7 @@ umiejętność | poziom | stopień | kostka |
 :---:|:---:|:---:|:---:|
 język wspólny | - | - | - |
 wyszukiwanie informacji | 1 + **PR** | = 8 | **2k6** | 
-handlowanie | 1 + **CHR** | = *7* | **k12** |
+handlowanie | 1 + **CHR** | = *6* | **k10** |
 aktorstwo | poziom + **CHR** | = *6* | **k10**
 
 # Ekwipunek
