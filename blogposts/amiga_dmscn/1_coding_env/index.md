@@ -134,4 +134,12 @@ This is how we register the effect. First argument is the effect's name, the res
 EFFECT(Hello, Load, Unload, Init, Kill, Render, VBlank);
 ```
 
-- `Load` - is called right at the beginning. When we run a production (that is a collection of different effects), 
+- `Load` - is called right at the beginning. It's the best place to put all data preparation code to have it ready when the `Init` start. When we run a production (which is a collection of many different effects), their `Load`s will be called together before the first effect starts, so keep that in mind!
+- `Unload` - like `Load` but in reverse, all `Unloads` get called when the production is ending and the last effect finishes. Currently rarely used in favor of `Kill`, see the disclaimer below. 
+- `Init` - that's the entry point of the effect. We need to set up bitplanes and Copper list(s), enable/disable right DMA channels here.
+- `Kill` - all cleanup code goes here, unlike `Unload` it's called when the given effect finishes.
+- `Render` - called once per frame, most of the effect's logic will be happening there. In our example it only waits for the VBlank (which isn't needed, you can remove it and see the effect still runs, but I left it here to demonstrate the function).
+- `VBlank` - that's the code that will be called under the VBlank interrupt. It's a small window of time, so don't put too much logic there, but if you for example want to switch the color palette, it may be a good place to do it.
+
+[TODO load/unload disclaimer]
+
