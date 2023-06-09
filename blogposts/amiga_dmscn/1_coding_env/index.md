@@ -20,3 +20,7 @@ There are two ways to setting everything up - building it yourself (only Linux a
 
 # Running effects
 No matter which way you've used, you should now be in the main directory of the `amiga-dmscn-tutorial`.
+
+# Example effect
+Let's look at the simple effect I prepared for this post. It will let us 
+
