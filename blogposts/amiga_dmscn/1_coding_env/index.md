@@ -22,5 +22,70 @@ There are two ways to setting everything up - building it yourself (only Linux a
 No matter which way you've used, you should now be in the main directory of the `amiga-dmscn-tutorial`.
 
 # Example effect
-Let's look at the simple effect I prepared for this post. It will let us 
+Let's look at the example code I prepared for this post. It will let us familiarize with the effect's code structure and most important parts. Here it is:
 
+```
+#include <effect.h>
+#include <copper.h>
+#include <color.h>
+#include <types.h>
+#include <fx.h>
+#include <gfx.h>
+#include <stdlib.h>
+#include <system/memory.h>
+
+#define WIDTH 320
+#define HEIGHT 256
+#define DEPTH 3
+
+static CopListT *cp;
+static CopInsT *bplptr[DEPTH];
+static BitmapT *screen;
+
+#include "data/gradient_pal.c"
+
+static void MakeCopperList(CopListT *cp, CopInsT **bplptr) {
+  short i;
+
+  CopInit(cp);
+  CopSetupBitplanes(cp, bplptr, screen, DEPTH);
+  
+  for(i = 0; i < gradient_pal_count; i++) {
+    CopWaitSafe(cp, 10 * i, 0);
+    CopSetColor(cp, 0, gradient_pal.colors[i]);
+  }
+
+  for(i = 0; i < gradient_pal_count; i++) {
+    CopWaitSafe(cp, Y(110 + (10*i)), 0);
+    CopSetColor(cp, 0, gradient_pal.colors[14-i]);
+  }
+
+  CopEnd(cp);
+}
+
+  
+
+static void Init(void) {
+  screen = NewBitmap(WIDTH, HEIGHT, DEPTH);
+  SetupPlayfield(MODE_LORES, DEPTH, 0, 0, WIDTH, HEIGHT);
+  cp = NewCopList(100);
+  MakeCopperList(cp, bplptr);
+  CopListActivate(cp);
+
+  EnableDMA(DMAF_RASTER | DMAF_BLITTER);
+}
+
+  
+
+static void Render(void) {
+  TaskWaitVBlank();
+}
+
+EFFECT(Hello, NULL, NULL, Init, NULL, Render, NULL);
+```
+
+You will find the same code in the `effects/hello` directory in our tutorial repo too. After calling `make run`, you should see something like this:
+
+![example Amiga effect](hello.png)
+
+It doesn't do mu
