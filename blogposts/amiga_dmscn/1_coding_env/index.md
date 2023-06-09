@@ -27,12 +27,6 @@ Let's look at the example code I prepared for this post. It will let us familiar
 ```
 #include <effect.h>
 #include <copper.h>
-#include <color.h>
-#include <types.h>
-#include <fx.h>
-#include <gfx.h>
-#include <stdlib.h>
-#include <system/memory.h>
 
 #define WIDTH 320
 #define HEIGHT 256
@@ -63,8 +57,6 @@ static void MakeCopperList(CopListT *cp, CopInsT **bplptr) {
   CopEnd(cp);
 }
 
-  
-
 static void Init(void) {
   screen = NewBitmap(WIDTH, HEIGHT, DEPTH);
   SetupPlayfield(MODE_LORES, DEPTH, 0, 0, WIDTH, HEIGHT);
@@ -74,8 +66,6 @@ static void Init(void) {
 
   EnableDMA(DMAF_RASTER | DMAF_BLITTER);
 }
-
-  
 
 static void Render(void) {
   TaskWaitVBlank();
@@ -88,4 +78,60 @@ You will find the same code in the `effects/hello` directory in our tutorial rep
 
 ![example Amiga effect](hello.png)
 
-It doesn't do mu
+As you can see, it doesn't do much. If you read the code and my previous post, you may probably have guessed already what is going on.  The gist is, we read a gradient color palette from *somewhere* (we'll get to this) and use it to create a simple Copper list that changes the background color every 10 raster lines.
+But let's break this into smaller pieces.
+
+```
+#include <effect.h>
+#include <copper.h>
+```
+
+First, we of course have some headers provided by the framework. Since our effect doesn't do much, we only need two - [effect.h](https://github.com/cahirwpz/demoscene/blob/master/include/effect.h) that contains some useful definitions, like the `Effect` struct itself and profiler stuff. Generally speaking, it will be used in every effect.
+[copper.h](https://github.com/cahirwpz/demoscene/blob/master/include/copper.h) is another classic, without it we wouldn't be able do define and run our Copper list.
+
+I encourage you to snoop around [include dir](https://github.com/cahirwpz/demoscene/tree/master/include) itself to check out other goodies the framework has to offer. Among other things, you will find Blitter helpers, shape primitives, tools to work with color palettes and music players.
+
+```
+#define WIDTH 320
+#define HEIGHT 256
+#define DEPTH 1
+```
+
+Some rather self-explanatory definitions regarding the screen we are going to work with. Lores PAL screen with only one bitplane. You may think "wait, only one? But we have 16 colors on the screen! One bitplay can have only two colors..."
+While this is true, we only ever touch one color register, color register `0` and change it state mid-frame many times. ^^" That's why we don't need more.
+
+```
+static CopListT *cp;
+static CopInsT *bplptr[DEPTH];
+static BitmapT *screen;
+
+#include "data/gradient_pal.c"
+```
+
+Here we declare our Copper list, a bitmap that will be our screen and a *bitplane pointer*. [TODO explain]
+The last line includes an external asset. It may be a color palette (like in our case here), an image, a tracker module, an array of coordinates for Blitter to draw lines... anything really. In next part of this post we'll see how those assets are prepared and managed, for now just remember our `gradient_pal.c` looks like this:
+
+```
+#define gradient_pal_count 16
+
+const __data PaletteT gradient_pal = {
+  .count = 16,
+  .colors = {
+    0x001,
+    0x002,
+    ...
+```
+
+Now we can skip some code and go straight to the last line:
+
+```
+EFFECT(Hello, NULL, NULL, Init, NULL, Render, NULL);
+```
+
+This is how we register the effect. First argument is the effect's name, the rest are hook functions called at different points of the effect's life cycle. Our `Hello` has a lot of `NULLs`, the fully filled macro would look like this:
+
+```
+EFFECT(Hello, Load, Unload, Init, Kill, Render, VBlank);
+```
+
+- `Load` - is called right at the beginning. When we run a production (that is a collection of different effects), 
