@@ -9,19 +9,26 @@
 		4. Third method of loading the floppy disk images
 	4. Emulator's technical specification
 
-
-
 # Using the X68000 emulator
 
-X68000 emulator supports the `XDF` floppy disk image file format. There are plans to support hard drives in the future.
+X68000 emulator supports the XDF floppy disk image file format. There are plans to support hard drives in the future.
 
 ## 1.1 Starting the emulator
+
+The X68000 emulator can started in two ways - either by enabling it in the X68000Z setup utility or by clicking the emulator icon in the X68000Z game launcher.
+For details about the setup utility and the game launcher, refer to their corresponding manuals.
 
 ## 1.2 Turning off the emulator
 
 ## 1.3 Loading the floppy disc images
 
+Several methods of loading floppy disk images are supported.
+
+*Note:
+Provided SD cards with game floppy disk images cannot be run in the emulator. (Use X68000Z launcher for this.)*
+
 ### 1.3.1 Loading SD cards included in the Early Access Kit
+
 In the Early Access Kit you will find a copy of the Human68k v1.0 operating system attached. Insert it into the SD card slot to start the system.
 ![[emulator_1_3_1.png]]
 
@@ -35,8 +42,6 @@ Prepare your SDHC card by mounting it into your PC computer and making sure it i
 
 Prepare XDF files you wish to use and copy them onto your SDHC card.
 
-
-
 ### 1.3.3 Second method of loading the floppy disk images
 
 If you name your file `automount.xdf` and place it at the top level of your SD card, the emulator will attempt to automatically mount and boot it.
@@ -45,13 +50,13 @@ If you name your file `automount.xdf` and place it at the top level of your SD c
 
 ### 1.3.4 Third method of loading the floppy disk images
 
+![[Pasted image 20230610194604.png]]
+
 If no image with the filename `automount.xdf` is present, you can load multiple images onto your SD card. Upon inserting it into the X68000Z, you will be presented with a selection screen, where you can pick which image to boot. 
 Use cursor keys to navigate the menu, Enter or Spacebar to confirm.
 Select [cancel] (or press ESC) to exit the screen or simply eject the SD card.
 
-
-(TODO: something about mouse and joystick?)
-
+![[emulator_1_3_4_2.png]]
 
 ## 1.4 Emulator's technical specification
 
