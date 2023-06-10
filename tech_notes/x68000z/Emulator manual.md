@@ -59,4 +59,21 @@ Underneath you will find the specifications of the X68000 emulator shipped with 
 
 #### Video output
 - Frame buffer's size 768x512, HDMI 720P with DE scaling to 972x648 (with a 5% safety zone)
-- X68000's maximum resolution is 768x512, 
+- X68000's maximum resolution is 768x512, Higher resolution's cannot be drawn (?)
+
+#### Audio output
+- HDMI output and headphone jack. Internal speaker output can also be enabled for the "X68000Z Launcher" (when headphones are not connected).
+
+#### Floppy disk related
+- Physically inserting and removing SD cards is being treated as inserting and removing floppy disks. You can press the [Eject] button to "virtually" remove the card from the system (the status LED indicator will turn off), Press [Eject] again to re-insert the card.
+- Each SD card slot is treated as one floppy disk drive. If you want to insert two floppy images at once, you need to use two SD cards.
+- You can use your own floppy disk images (in XDF format).
+	- SDHC SD card format is supported (FAT32 filesystem, capacity up to 32GB)
+	- Make sure to back up your floppy disk files.
+	- Copy your XDF image files to the SD card to use them.
+	
+Files on the SD card are handled differently depending on the filenames and directory structure.
+1. Single XDF file named `automount.xdf` in the card's top level directory:
+	If such file exists on the SD card, it will be automatically mounted and booted upon inserting into the machine.
+2. "X68000Z" directory in the card's top level directory:
+	If no file named `automount.xdf` exists, a file to auto-mount will be picked from this directory. In case of multiple valid images, 
