@@ -54,3 +54,9 @@ Select [cancel] (or press ESC) to exit the screen or simply eject the SD card.
 
 
 ## 1.4 Emulator's technical specification
+
+Underneath you will find the specifications of the X68000 emulator shipped with the X68000Z firmware version 1.0.0
+
+#### Video output
+- Frame buffer's size 768x512, HDMI 720P with DE scaling to 972x648 (with a 5% safety zone)
+- X68000's maximum resolution is 768x512, 
