@@ -76,4 +76,31 @@ Files on the SD card are handled differently depending on the filenames and dire
 1. Single XDF file named `automount.xdf` in the card's top level directory:
 	If such file exists on the SD card, it will be automatically mounted and booted upon inserting into the machine.
 2. "X68000Z" directory in the card's top level directory:
-	If no file named `automount.xdf` exists, a file to auto-mount will be picked from this directory. In case of multiple valid images, 
+	If no file named `automount.xdf` exists, a file to auto-mount will be picked from this directory. In case of multiple valid images, you will be able to choose them from a list.
+	- Up to 100 files can be selected from. Even if the directory contains more than 100 valid image files, the list will show only up to 100.
+	- To select the image, you need to use the keyboard.
+	- Navigate the list with cursor keys, confirm your selection with [Enter] or [Spacebar].
+	- To exit the selection screen, select [Cancel], press [ESC] or eject the SD card.
+
+- Write-protected SD cards will be treated as write-protected floppy disks.
+- Data written onto a "floppy drive" will be copied to the SD card when the eject operation is being performed. You can do it by:
+	- via the X68000 software
+	- pressing the physical [Eject] button
+- After ejecting the SD card, the status LED will turn off, then you can remove the card.
+- If you remove the SD card when the status LED is on, the data will not be written correctly.
+- Keep in mind that resetting the machine does not perform the eject operation (so your data won't be written to the SD card).
+
+#### RS-232C port
+- Supported baud rates are:  **300bps, 600bps, 1200bps, 2400bps, 4800bps, 9600bps, 19200bps, 38400bps**. If you experience unstable connection, try lowering your baud rate.
+- Hardware flow control is not supported.
+- Setting stop bit to 1.5 on the X68000 side will be treated like 1 bit by the UART.
+
+#### RTC
+- Changing RTC settings in Human68k won't affect the built-in RTC (you should use X68000Z boot settings screen instead).
+- The alarm feature is not supported.
+
+#### Miscellaneous
+- Only one keyboard and one mouse can be connected.
+- Two DirectInput joypads can be connected. P1 and P2 will be assigned a joypad automatically.
+- Disconnecting P1's joypad won't cause P2's joypad being re-assigned to P1.
+	
