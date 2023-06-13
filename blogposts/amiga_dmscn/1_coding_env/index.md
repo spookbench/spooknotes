@@ -171,5 +171,7 @@ void SetupPlayfield(u_short mode, u_short depth, u_short xs, u_short ys, u_short
 
 Looking at them one by one will help us understand what's going on. We are getting close-ish to the metal here, so abstraction levels will be low.
 
-- **SetupMode()** touches three registers: <a href="http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0022.html" target="_blank">BPLCON0, BPLCON2 and BPLCON3</a>. (Why not *BPLCON1* as well? If you click the link, you'll see it deals with horizontal scrolling positions, something we are not really interested here). The first one is the main reason we're here - it lets us set the number of bitplanes (`BPU` bit), enable or d
-
+- **SetupMode(mode, depth)** touches three registers: <a href="http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0022.html" target="_blank">BPLCON0, BPLCON2 and BPLCON3</a>. (Why not *BPLCON1* as well? If you click the link, you'll see it deals with horizontal scrolling positions, something we are not really interested here). The first two are the main reason we're here - `BPLCON0` lets us set the number of bitplanes (`BPU` bit), enable (or, in our case, disable, `HIRES`) and enable the `COLOR` video output. `BPLCON2` is all about playfield priorities.
+  `BPLCON3` in only for enabling ECS-specific features. We are targeting OCS, so `SetupMode()` sets the register to `0` and that's it.
+- **SetupBitplaneFetch(mode, xs, w)** modifies <a href="http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node002C.html" target="_blank">DDFSTRT and DDSTOP</a>. If you remember the paragraph about scrolling from <a href="https://spookbench.net/blog/amiga_dmscn/part0.html" target="_blank">my previous post</a>, you may see those registers mentioned there.
+l
