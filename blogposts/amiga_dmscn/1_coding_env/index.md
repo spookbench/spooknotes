@@ -143,3 +143,33 @@ EFFECT(Hello, Load, Unload, Init, Kill, Render, VBlank);
 
 [TODO load/unload disclaimer]
 
+Equipped with this knowledge, we now know the function we should examine first in our effect is `void Init(void)`, as this is where everything starts happening. 
+
+```
+static void Init(void) {
+  screen = NewBitmap(WIDTH, HEIGHT, DEPTH);
+  SetupPlayfield(MODE_LORES, DEPTH, 0, 0, WIDTH, HEIGHT);
+  cp = NewCopList(100);
+  MakeCopperList(cp, bplptr);
+  CopListActivate(cp);
+
+  EnableDMA(DMAF_RASTER | DMAF_BLITTER);
+}
+```
+
+Preferably we want to be able to show something on a screen, so we have to initialize a new bitmap. 
+We also need to prepare screen-related chipset registers. That's what `SetupPlayfield(u_short mode, u_short depth, u_short xs, u_short ys, u_short w, u_short h)` is doing.  Under the hood it calls three other functions:
+```
+/* lib/libgfx/SetupPlayfield.c */
+
+void SetupPlayfield(u_short mode, u_short depth, u_short xs, u_short ys, u_short w, u_short h){
+  SetupMode(mode, depth);
+  SetupBitplaneFetch(mode, xs, w);
+  SetupDisplayWindow(mode, xs, ys, w, h);
+}
+```
+
+Looking at them one by one will help us understand what's going on. We are getting close-ish to the metal here, so abstraction levels will be low.
+
+- **SetupMode()** touches three registers: <a href="http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0022.html" target="_blank">BPLCON0, BPLCON2 and BPLCON3</a>. (Why not *BPLCON1* as well? If you click the link, you'll see it deals with horizontal scrolling positions, something we are not really interested here). The first one is the main reason we're here - it lets us set the number of bitplanes (`BPU` bit), enable or d
+
