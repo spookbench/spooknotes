@@ -20,3 +20,158 @@ There are two ways to setting everything up - building it yourself (only Linux a
 
 # Running effects
 No matter which way you've used, you should now be in the main directory of the `amiga-dmscn-tutorial`.
+
+# Example effect
+Let's look at the example code I prepared for this post. It will let us familiarize with the effect's code structure and most important parts. Here it is:
+
+```
+#include <effect.h>
+#include <copper.h>
+
+#define WIDTH 320
+#define HEIGHT 256
+#define DEPTH 3
+
+static CopListT *cp;
+static CopInsT *bplptr[DEPTH];
+static BitmapT *screen;
+
+#include "data/gradient_pal.c"
+
+static void MakeCopperList(CopListT *cp, CopInsT **bplptr) {
+  short i;
+
+  CopInit(cp);
+  CopSetupBitplanes(cp, bplptr, screen, DEPTH);
+  
+  for(i = 0; i < gradient_pal_count; i++) {
+    CopWaitSafe(cp, 10 * i, 0);
+    CopSetColor(cp, 0, gradient_pal.colors[i]);
+  }
+
+  for(i = 0; i < gradient_pal_count; i++) {
+    CopWaitSafe(cp, Y(110 + (10*i)), 0);
+    CopSetColor(cp, 0, gradient_pal.colors[14-i]);
+  }
+
+  CopEnd(cp);
+}
+
+static void Init(void) {
+  screen = NewBitmap(WIDTH, HEIGHT, DEPTH);
+  SetupPlayfield(MODE_LORES, DEPTH, 0, 0, WIDTH, HEIGHT);
+  cp = NewCopList(100);
+  MakeCopperList(cp, bplptr);
+  CopListActivate(cp);
+
+  EnableDMA(DMAF_RASTER | DMAF_BLITTER);
+}
+
+static void Render(void) {
+  TaskWaitVBlank();
+}
+
+EFFECT(Hello, NULL, NULL, Init, NULL, Render, NULL);
+```
+
+You will find the same code in the `effects/hello` directory in our tutorial repo too. After calling `make run`, you should see something like this:
+
+![example Amiga effect](hello.png)
+
+As you can see, it doesn't do much. If you read the code and my previous post, you may probably have guessed already what is going on.  The gist is, we read a gradient color palette from *somewhere* (we'll get to this) and use it to create a simple Copper list that changes the background color every 10 raster lines.
+But let's break this into smaller pieces.
+
+```
+#include <effect.h>
+#include <copper.h>
+```
+
+First, we of course have some headers provided by the framework. Since our effect doesn't do much, we only need two - [effect.h](https://github.com/cahirwpz/demoscene/blob/master/include/effect.h) that contains some useful definitions, like the `Effect` struct itself and profiler stuff. Generally speaking, it will be used in every effect.
+[copper.h](https://github.com/cahirwpz/demoscene/blob/master/include/copper.h) is another classic, without it we wouldn't be able do define and run our Copper list.
+
+I encourage you to snoop around [include dir](https://github.com/cahirwpz/demoscene/tree/master/include) itself to check out other goodies the framework has to offer. Among other things, you will find Blitter helpers, shape primitives, tools to work with color palettes and music players.
+
+```
+#define WIDTH 320
+#define HEIGHT 256
+#define DEPTH 1
+```
+
+Some rather self-explanatory definitions regarding the screen we are going to work with. Lores PAL screen with only one bitplane. You may think "wait, only one? But we have 16 colors on the screen! One bitplay can have only two colors..."
+While this is true, we only ever touch one color register, color register `0` and change it state mid-frame many times. ^^" That's why we don't need more.
+
+```
+static CopListT *cp;
+static CopInsT *bplptr[DEPTH];
+static BitmapT *screen;
+
+#include "data/gradient_pal.c"
+```
+
+Here we declare our Copper list, a bitmap that will be our screen and a *bitplane pointer*. [TODO explain]
+The last line includes an external asset. It may be a color palette (like in our case here), an image, a tracker module, an array of coordinates for Blitter to draw lines... anything really. In next part of this post we'll see how those assets are prepared and managed, for now just remember our `gradient_pal.c` looks like this:
+
+```
+#define gradient_pal_count 16
+
+const __data PaletteT gradient_pal = {
+  .count = 16,
+  .colors = {
+    0x001,
+    0x002,
+    ...
+```
+
+Now we can skip some code and go straight to the last line:
+
+```
+EFFECT(Hello, NULL, NULL, Init, NULL, Render, NULL);
+```
+
+This is how we register the effect. First argument is the effect's name, the rest are hook functions called at different points of the effect's life cycle. Our `Hello` has a lot of `NULLs`, the fully filled macro would look like this:
+
+```
+EFFECT(Hello, Load, Unload, Init, Kill, Render, VBlank);
+```
+
+- `Load` - is called right at the beginning. It's the best place to put all data preparation code to have it ready when the `Init` start. When we run a production (which is a collection of many different effects), their `Load`s will be called together before the first effect starts, so keep that in mind!
+- `Unload` - like `Load` but in reverse, all `Unloads` get called when the production is ending and the last effect finishes. Currently rarely used in favor of `Kill`, see the disclaimer below. 
+- `Init` - that's the entry point of the effect. We need to set up bitplanes and Copper list(s), enable/disable right DMA channels here.
+- `Kill` - all cleanup code goes here, unlike `Unload` it's called when the given effect finishes.
+- `Render` - called once per frame, most of the effect's logic will be happening there. In our example it only waits for the VBlank (which isn't needed, you can remove it and see the effect still runs, but I left it here to demonstrate the function).
+- `VBlank` - that's the code that will be called under the VBlank interrupt. It's a small window of time, so don't put too much logic there, but if you for example want to switch the color palette, it may be a good place to do it.
+
+[TODO load/unload disclaimer]
+
+Equipped with this knowledge, we now know the function we should examine first in our effect is `void Init(void)`, as this is where everything starts happening. 
+
+```
+static void Init(void) {
+  screen = NewBitmap(WIDTH, HEIGHT, DEPTH);
+  SetupPlayfield(MODE_LORES, DEPTH, 0, 0, WIDTH, HEIGHT);
+  cp = NewCopList(100);
+  MakeCopperList(cp, bplptr);
+  CopListActivate(cp);
+
+  EnableDMA(DMAF_RASTER | DMAF_BLITTER);
+}
+```
+
+Preferably we want to be able to show something on a screen, so we have to initialize a new bitmap. 
+We also need to prepare screen-related chipset registers. That's what `SetupPlayfield(u_short mode, u_short depth, u_short xs, u_short ys, u_short w, u_short h)` is doing.  Under the hood it calls three other functions:
+```
+/* lib/libgfx/SetupPlayfield.c */
+
+void SetupPlayfield(u_short mode, u_short depth, u_short xs, u_short ys, u_short w, u_short h){
+  SetupMode(mode, depth);
+  SetupBitplaneFetch(mode, xs, w);
+  SetupDisplayWindow(mode, xs, ys, w, h);
+}
+```
+
+Looking at them one by one will help us understand what's going on. We are getting close-ish to the metal here, so abstraction levels will be low.
+
+- **SetupMode(mode, depth)** touches three registers: <a href="http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node0022.html" target="_blank">BPLCON0, BPLCON2 and BPLCON3</a>. (Why not *BPLCON1* as well? If you click the link, you'll see it deals with horizontal scrolling positions, something we are not really interested here). The first two are the main reason we're here - `BPLCON0` lets us set the number of bitplanes (`BPU` bit), enable (or, in our case, disable, `HIRES`) and enable the `COLOR` video output. `BPLCON2` is all about playfield priorities.
+  `BPLCON3` in only for enabling ECS-specific features. We are targeting OCS, so `SetupMode()` sets the register to `0` and that's it.
+- **SetupBitplaneFetch(mode, xs, w)** modifies <a href="http://amigadev.elowar.com/read/ADCD_2.1/Hardware_Manual_guide/node002C.html" target="_blank">DDFSTRT and DDSTOP</a>. If you remember the paragraph about scrolling from <a href="https://spookbench.net/blog/amiga_dmscn/part0.html" target="_blank">my previous post</a>, you may see those registers mentioned there.
+l
