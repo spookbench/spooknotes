@@ -1,0 +1,3 @@
+# い adjectives
+
+# な adjectives
