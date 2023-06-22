@@ -2,7 +2,7 @@ After the lengthy theoretical introduction, it's time to get our coding environm
 It's a full environment for cross-compilation from PC to the Amiga, featuring API for communication with all part of the Amiga chipset, GDB debugger integration, modified FS-UAE emulator (also with its own, built-in debugger) and other goodies. 
 
 There are two ways to setting everything up - building it yourself (only Linux and MacOS) or using a ready-to-go Debian virtual machine prepared by Codi, another Ghostown member, and adapted by me for purposes of this series.
-
+[[blogposts/amiga_dmscn/0_architecture_overview/index]]
 ## DIY way
 1. Grab base toolchain from [here] - it contains `amiga-gcc` compiler, object dumper and the emulator. While you can try building it yourself (by using a prepared `nazwa` script), be warned, it may be a bit capricious, especially on systems that are not Debian-based. On repo's **Releases** page, Cahir provides pre-compiled binaries of the latest version, you can grab them if you have troubles.
 2. If you built the binaries yourself, remember to add them to your `$PATH`
