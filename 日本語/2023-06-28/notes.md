@@ -29,7 +29,7 @@ see grammar: [[Adjectives]]
 - {猫|ねこ} - a cat
 - {犬|いぬ} - a dog
 - {雄|あん}{鶏|どり} - a rooster
-- {栗|り}{鼠|す} - a squirrel
+- りす - a squirrel
 - {兎|いさぎ} - a rabbit
 - {狐|きつね} - a fox
 - {猿|さる} - a monkey
