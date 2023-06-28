@@ -24,6 +24,11 @@ see grammar: [[Adjectives]]
 #### [A] **は** [body part] **が**〜です。
 - 象**は**{鼻|はな}^**が**長いです。
 
+聞きます
+a) 兎
+b) きりん
+c) 蛇
+
 ---
 
 ## Vocabulary
@@ -37,7 +42,7 @@ see grammar: [[Adjectives]]
 - {鼠|ねずみ} - a mouse
 - {猫|ねこ} - a cat
 - {犬|いぬ} - a dog
-- {雄|あん}{鶏|どり} - a rooster
+- {雄|あん}{鶏|どり} にわとり- a rooster/a chicken
 - りす - a squirrel
 - {兎|いさぎ} - a rabbit
 - {狐|きつね} - a fox
