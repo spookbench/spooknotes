@@ -19,9 +19,18 @@ see grammar: [[Adjectives]]
 8. このパンは、{安|やす}*くて*{美味|おい}しいです。
 	This bread is cheap and delicious.
 
+
+## Body parts
+#### [A] **は** [body part] **が**〜です。
+- 象**は**{鼻|はな}^**が**長いです。
+
 ---
 
 ## Vocabulary
+- しっぽ - tail
+- {毛|け} - animal fur
+- {鼻|はな} - nose, elephant's trunk
+- {体|からだ} - body
 - {橋|はし} - a bridge
 - {親|しん}{切|せつ} - kind, gentle (な-adjective)
 - {蛇|へび} - a snake
@@ -42,7 +51,7 @@ see grammar: [[Adjectives]]
 - わに - a crocodile
 - {虎|とら} - a tiger
 - {獅子|しし} - a lion
-- {象|ぞう} - a elephant
+- {象|ぞう} - an elephant
 - きりん - a giraffe
 - {熊|くま} - a bear
 - {魚|さかな} - a fish
