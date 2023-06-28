@@ -23,6 +23,10 @@
 - あのえいがは**おもしろ*くありませんでした***。
 
 ## Connective form
+*い* is dropped from first adjective and replaced by *くて*
+- このカバンは、**大き*くて*思い**です。
+	- **NOT** このカバンは、大き**いと**、思いです。
+- このカバンは、**大き*くて*べんり**です。(べんり - convenient, な-adjective)
 
 ---
 
@@ -51,3 +55,9 @@ If the adjective is at the end of the sentence, *な* is dropped.
 ### Negative form
 _な_ is dropped and replaced by *では・じゃ + なかった (informal)・ありませんでした (formal)**
 - むかし、わたしのまちは**あんぜん*じゃなかった***です。
+
+## Connective form
+*で* is added at the end of the first adjective
+- 彼は**ハンサム*で*やさしい**です。(ハンサム - handsome, な-adjective)
+- 彼は**ハンサム*で*{有|ゆう}{名|めい}**です。({有|ゆう}{名|めい} - famous, な-adjective)
+- パーティーは、**{賑|にぎ}やか*で*楽しい**かったです。
