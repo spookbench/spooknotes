@@ -1,18 +1,14 @@
 [
-  "cm-editor-syntax-highlight-obsidian",
-  "code-block-copy",
-  "obsidian-habitica-integration",
-  "obsidian-kanban",
-  "dataview",
-  "obsidian-excalidraw-plugin",
-  "calendar",
-  "obsidian-style-settings",
-  "url-into-selection",
   "obsidian-banners",
-  "obsidian-markdown-furigana",
-  "obsidian-5e-statblocks",
+  "calendar",
+  "obsidian-excalidraw-plugin",
+  "dataview",
+  "obsidian-kanban",
   "templater-obsidian",
+  "obsidian-git",
+  "obsidian-style-settings",
+  "cm-editor-syntax-highlight-obsidian",
   "buttons",
   "obsidian-to-anki-plugin",
-  "obsidian-git"
+  "obsidian-markdown-furigana"
 ]
