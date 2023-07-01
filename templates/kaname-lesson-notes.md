@@ -1,13 +1,13 @@
 
-> [!info] related notes
+> [!info]- related notes
 > [notes go here]
 
-## lesson topic 1
+## [lesson topic]
 
 
 
 
-## lesson topic 2
+## [exercises]
 
 
 > [!example]- lesson vocabulary
