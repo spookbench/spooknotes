@@ -1,38 +1,56 @@
 # Monday
-### daily note: 
---- 
-### agenda:
----
-# Tuesday
-### daily note: 
---- 
-### agenda:
----
-# Wednesday
-### daily note: 
---- 
-### agenda:
-- [13:00 - 14:00] therapy 
-- [16:45 - 18:15] Japanese lesson
 
----
+> [!example]- Daily note 
+> [note goes here]
+
+> [!abstract]- Agenda  
+> 
+
+# Tuesday
+
+> [!example]- Daily note 
+> [note goes here]
+
+> [!abstract]- Agenda  
+> 
+
+# Wednesday
+
+> [!example]- Daily note 
+> [note goes here]
+
+> [!abstract]- Agenda  
+> - [13:00 - 14:00] therapy 
+> - [16:45 - 18:15] Japanese lesson
+
 # Thursday
-### daily note: 
---- 
-### agenda:
----
+
+> [!example]- Daily note 
+> [note goes here]
+
+> [!abstract]- Agenda  
+> 
+
 # Friday
-### daily note: 
---- 
-### agenda:
----
+
+> [!example]- Daily note 
+> [note goes here]
+
+> [!abstract]- Agenda  
+> 
+
 # Saturday
-### daily note: 
---- 
-### agenda:
----
+
+> [!example]- Daily note 
+> [note goes here]
+
+> [!abstract]- Agenda  
+> 
+
 # Sunday
-### daily note: 
---- 
-### agenda:
----
+
+> [!example]- Daily note 
+> [note goes here]
+
+> [!abstract]- Agenda  
+> 

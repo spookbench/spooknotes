@@ -1,14 +1,17 @@
+
+> [!info] related notes
+> [notes go here]
+
 ## lesson topic 1
+
+
 
 
 ## lesson topic 2
 
 
----
-
-## Vocabulary
-がっき - semester
-- [ ] Anki'd
+> [!example]- lesson vocabulary
+> がっき - semester
 
 
 

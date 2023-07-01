@@ -1,5 +1,7 @@
 ## Adjectives: connective form
-see grammar: [[Adjectives]]
+
+> [!info]- adjectives info 
+> ![[Adjectives]]
 
 ### ◎れんしゅう◎
 1. 大き*くて*{黒|くろ}いカバンは、わたしのです。
